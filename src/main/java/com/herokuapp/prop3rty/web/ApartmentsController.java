@@ -13,8 +13,8 @@ import com.herokuapp.prop3rty.domain.Employee;
 import com.herokuapp.prop3rty.service.EmployeeService;
 
 @Controller
-@RequestMapping("/employee")
-public class EmployeeController {
+@RequestMapping("/apartments")
+public class ApartmentsController {
 	
 	@Autowired
 	private EmployeeService employeeService;
