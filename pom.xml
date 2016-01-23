@@ -4,13 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 
-	<groupId>ro.sci</groupId>
+	<groupId>com.herokuapp.prop3rty</groupId>
 	<artifactId>prop3rty</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>prop3rty</name>
-	<description>Employee Management System</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,7 +20,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 
 	<dependencies>
@@ -77,4 +76,5 @@
 
 		</plugins>
 	</build>
+	<description>Real Estate Evaluator</description>
 </project>

@@ -1,8 +1,8 @@
-package ro.sci.ems.dao;
+package com.herokuapp.prop3rty.dao;
 
 import java.util.Collection;
 
-import ro.sci.ems.domain.Employee;
+import com.herokuapp.prop3rty.domain.Employee;
 
 public interface EmployeeDAO extends BaseDAO<Employee>{
 

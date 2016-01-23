@@ -1,8 +1,8 @@
-package ro.sci.ems.dao;
+package com.herokuapp.prop3rty.dao;
 
 import java.util.Collection;
 
-import ro.sci.ems.domain.AbstractModel;
+import com.herokuapp.prop3rty.domain.AbstractModel;
 
 public interface BaseDAO<T extends AbstractModel> {
 

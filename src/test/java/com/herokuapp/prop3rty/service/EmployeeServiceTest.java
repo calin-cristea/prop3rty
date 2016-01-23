@@ -1,4 +1,4 @@
-package ro.sci.ems.service;
+package com.herokuapp.prop3rty.service;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -15,9 +15,11 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import ro.sci.ems.Application;
-import ro.sci.ems.domain.Employee;
-import ro.sci.ems.domain.Gender;
+import com.herokuapp.prop3rty.Application;
+import com.herokuapp.prop3rty.domain.Employee;
+import com.herokuapp.prop3rty.domain.Gender;
+import com.herokuapp.prop3rty.service.EmployeeService;
+import com.herokuapp.prop3rty.service.ValidationException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)

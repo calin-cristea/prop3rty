@@ -1,4 +1,4 @@
-package ro.sci.ems.service;
+package com.herokuapp.prop3rty.service;
 
 import java.util.Calendar;
 import java.util.Collection;
@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import ro.sci.ems.dao.EmployeeDAO;
-import ro.sci.ems.domain.Employee;
+import com.herokuapp.prop3rty.dao.EmployeeDAO;
+import com.herokuapp.prop3rty.domain.Employee;
 
 @RestController
 @RequestMapping("/rest/employees")

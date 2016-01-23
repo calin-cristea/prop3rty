@@ -1,4 +1,4 @@
-package ro.sci.ems.dao.inmemory;
+package com.herokuapp.prop3rty.dao.inmemory;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -8,8 +8,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
-import ro.sci.ems.dao.EmployeeDAO;
-import ro.sci.ems.domain.Employee;
+import com.herokuapp.prop3rty.dao.EmployeeDAO;
+import com.herokuapp.prop3rty.domain.Employee;
 
 @Repository
 public class IMEmployeeDAO extends IMBaseDAO<Employee> implements EmployeeDAO {

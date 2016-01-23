@@ -1,4 +1,4 @@
-package ro.sci.ems.domain;
+package com.herokuapp.prop3rty.domain;
 
 import java.util.Date;
 

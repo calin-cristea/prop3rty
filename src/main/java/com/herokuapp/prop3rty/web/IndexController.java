@@ -1,4 +1,4 @@
-package ro.sci.ems.web;
+package com.herokuapp.prop3rty.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

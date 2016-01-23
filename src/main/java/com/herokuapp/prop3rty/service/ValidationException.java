@@ -1,4 +1,4 @@
-package ro.sci.ems.service;
+package com.herokuapp.prop3rty.service;
 
 import java.util.Arrays;
 
