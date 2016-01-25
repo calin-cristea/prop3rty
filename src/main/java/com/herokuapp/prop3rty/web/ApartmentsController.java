@@ -16,28 +16,9 @@ import com.herokuapp.prop3rty.service.EmployeeService;
 @RequestMapping("/apartments")
 public class ApartmentsController {
 	
-	@Autowired
-	private EmployeeService employeeService;
-	
 	@RequestMapping("")
 	public ModelAndView index() {
-		
-		Collection<Employee> allEmployees = employeeService.listAll();
-		
-		ModelAndView modelAndView  = new ModelAndView("employee_list");
-		modelAndView.addObject("allEmployees", allEmployees);
-		
-		return modelAndView;
-	}
-
-	@RequestMapping(method = RequestMethod.GET, params = "action=add")
-	public String add() {
-		return "employee_edit";
-	}
-	
-	
-	@RequestMapping(method = RequestMethod.GET, params = "action=edit")
-	public String edit(@RequestParam("id") Long id) {
-		return "employee_edit";
+		ModelAndView view = new ModelAndView("apt_sell");
+		return view;
 	}
 }

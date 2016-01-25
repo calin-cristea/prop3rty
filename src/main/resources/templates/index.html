@@ -1,38 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-
 <meta content="width=device-width, initial-scale=1, maximum-scale=1"
 	name="viewport">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>prop3rty</title>
-
 <link
 	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
 	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
-	rel="stylesheet" media="screen" />
-<link
-	href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
-	rel="stylesheet">
+	rel="stylesheet" media="screen">
 <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
 	th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script
-	src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
 </head>
 <body>
-
-	<div class="container-fluid">
-		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+	<div class="container-fluid text-center">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
 			<h1 class="text-center">PROP3RTY</h1>
-			<hr />
 			<p class="text-center">2016 OLIMPIA CENTER, CLUJ</p>
-			<br />
+			<br/>
 			<div class="list-group">
-				<a href="#" class="list-group-item">APARTAMENTE</a> <a href="#"
+				<a href="#" class="list-group-item">APARTAMENTE</a> <a href="apt_sell.html"
 					class="list-group-item">CASE</a> <a href="#"
 					class="list-group-item">PROPRIETATI COMERCIALE</a> <a href="#"
 					class="list-group-item">TERENURI</a> <a href="#"
@@ -40,71 +27,31 @@
 					class="list-group-item">DOCUMENTATIE</a> <a href="#"
 					class="list-group-item">CONTACT</a>
 			</div>
-			<br />
+			<br>
 			<div class="list-group">
 				<a href="#" class="list-group-item">DESPRE</a> <a href="#"
 					class="list-group-item">LEGAL</a>
 			</div>
-			<br />
+			<br>
 		</div>
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 			<div class="row">
-				<nav class="navbar navbar-default" role="navigation">
-					<!-- Brand and toggle get grouped for better mobile display -->
-
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse"
-							data-target=".navbar-ex1-collapse">
-							<span class="sr-only">Toggle navigation</span><span
-								class="icon-bar"></span><span class="icon-bar"></span><span
-								class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">Brand</a>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-
-					<div class="collapse navbar-collapse navbar-ex1-collapse">
-						<ul class="nav navbar-nav ">
-							<li class="active"><a href="#">Link</a></li>
-							<li><a href="#">Link</a></li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li><a href="#">Separated link</a></li>
-									<li><a href="#">One more separated link</a></li>
-								</ul></li>
-						</ul>
-						<form class="navbar-form navbar-left" role="search">
-							<div class="form-group">
-								<input class="form-control" placeholder="Search" type="text" />
-							</div>
-							<button type="button" class="btn btn-default">Submit</button>
-						</form>
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">Link</a></li>
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li><a href="#">Separated link</a></li>
-								</ul></li>
-						</ul>
-					</div>
-					<!-- /.navbar-collapse -->
-
+				<nav class="navbar navbar-default">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Contul meu<br></a></li>
+						<li><a href="#">Inregistrare user nou</a></li>
+						<li><a href="#"><img src="../static/images/logo2.jpg"
+								height="25" th:src="@{images/logo2.jpg}"></a></li>
+					</ul>
 				</nav>
 			</div>
 			<div class="row">
 				<img class="img-responsive" src="../static/images/avram_iancu.jpg"
-					th:src="@{images/avram_iancu.jpg}" />
+					th:src="@{images/avram_iancu.jpg}">
 			</div>
 		</div>
 	</div>
+
 
 </body>
 </html>
