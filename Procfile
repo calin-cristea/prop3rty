@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar  target/ems-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar  target/prop3rty-0.0.1-SNAPSHOT.jar
