@@ -10,6 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>prop3rty</name>
+	<description>Real Estate Evaluator</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -62,7 +63,7 @@
 			<version>1.11.4</version>
 		</dependency>
 
-		
+
 	</dependencies>
 
 	<build>
@@ -76,5 +77,5 @@
 
 		</plugins>
 	</build>
-	<description>Real Estate Evaluator</description>
+
 </project>
