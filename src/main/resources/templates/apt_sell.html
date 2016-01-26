@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>prop3rty</title>
+<title>prop3rty - Evaluare apartament</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta content="width=device-width, initial-scale=1, maximum-scale=1"
 	name="viewport" />
@@ -21,19 +21,17 @@
 	rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div class="container text-center">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<ul class="nav nav-pills navbar-right">
-					<li><a href="#">Contul meu<br /></a></li>
-					<li><a href="#">Inregistrare user nou</a></li>
 					<li><a href="#"><img src="../static/images/logo2.jpg"
 							height="25" th:src="@{images/logo2.jpg}" /></a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<img src="..\static\images\prop3rty.png" class="img-responsive"
@@ -44,8 +42,8 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<ul class="nav nav-pills nav-stacked">
-							<li class="active"><a href="#">ACASA</a></li>
-							<li><a href="/apartments">APARTAMENTE</a></li>
+							<li><a href="/">ACASA</a></li>
+							<li class="active"><a href="#">APARTAMENTE</a></li>
 							<li><a href="#">PROPRIETATI COMERCIALE</a></li>
 							<li><a href="#">TERENURI</a></li>
 							<li><a href="#">ZONE</a></li>
@@ -66,13 +64,60 @@
 			</div>
 			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 				<div class="row">
-					<img class="img-responsive" src="../static/images/avram_iancu.jpg"
-						th:src="@{images/avram_iancu.jpg}" />
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+						<form role="form" class="text-left">
+							<div class="form-group">
+								<label class="control-label" for="area">Suprafata:</label> <input
+									class="form-control input-sm" id="area" placeholder="Suprafata"
+									type="text" />
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="thermalInsulation">Izolare
+									termica:</label> <select class="form-control input-sm"
+									id="thermalInsulation" placeholder="Izolare termica">
+									<option>Nu</option>
+									<option>Da</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Finisaj:</label> <select
+									class="form-control input-sm">
+									<option>Nu</option>
+									<option>Mediu</option>
+									<option>Mare</option>
+									<option>Luxos</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="control-label">Incalzire centrala:</label> <select
+									class="form-control input-sm">
+									<option>Nu</option>
+									<option>Da</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="control-label" for="aptLevel">Etaj /
+									Nivel:</label> <input class="form-control input-sm" type="text"
+									id="aptLevel" placeholder="Etaj / Nivel" />
+							</div>
+							<div class="text-center">
+								<button type="submit" class="btn btn-default btn-lg">EVAL</button>
+							</div>
+
+							<div class="panel panel-default">
+
+								<div class="panel-body">Result</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+						<img src="..\static\images\cluj_areas.jpg" class="img-responsive"
+							th:src="@{images/cluj_areas.jpg}" />
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 </body>
 </html>

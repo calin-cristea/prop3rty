@@ -10,7 +10,6 @@
 	<packaging>jar</packaging>
 
 	<name>prop3rty</name>
-	<description>Real Estates Evaluator</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -77,4 +76,5 @@
 
 		</plugins>
 	</build>
+	<description>Real Estate Evaluator</description>
 </project>
