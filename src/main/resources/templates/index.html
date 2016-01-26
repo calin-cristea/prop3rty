@@ -1,53 +1,74 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+<title>prop3rty</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta content="width=device-width, initial-scale=1, maximum-scale=1"
 	name="viewport" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>prop3rty</title>
+<script type="text/javascript"
+	src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+	th:href="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<script type="text/javascript"
+	src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
+	th:href="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
 <link
 	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
 	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
-	rel="stylesheet" media="screen" />
-<script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
-	th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+	rel="stylesheet" type="text/css" />
+<link
+	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css"
+	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css}"
+	rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div class="container-fluid text-center">
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-			<h1 class="text-center">PROP3RTY</h1>
-			<p class="text-center">2016 OLIMPIA CENTER, CLUJ</p>
-			<br />
-			<div class="list-group">
-				<a href="/apartments" class="list-group-item">APARTAMENTE</a> <a
-					href="#" class="list-group-item">CASE</a> <a href="#"
-					class="list-group-item">PROPRIETATI COMERCIALE</a> <a href="#"
-					class="list-group-item">TERENURI</a> <a href="#"
-					class="list-group-item">ZONE</a> <a href="#"
-					class="list-group-item">DOCUMENTATIE</a> <a href="#"
-					class="list-group-item">CONTACT</a>
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="nav nav-pills navbar-right">
+					<li><a href="#">Contul meu<br /></a></li>
+					<li><a href="#">Inregistrare user nou</a></li>
+					<li><a href="#"><img src="../static/images/logo2.jpg"
+							height="25" th:src="@{images/logo2.jpg}" /></a></li>
+				</ul>
 			</div>
-			<br />
-			<div class="list-group">
-				<a href="#" class="list-group-item">DESPRE</a> <a href="#"
-					class="list-group-item">LEGAL</a>
-			</div>
-			<br />
 		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-			<div class="row">
-				<nav class="navbar navbar-default">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Contul meu<br /></a></li>
-						<li><a href="#">Inregistrare user nou</a></li>
-						<li><a href="#"><img src="../static/images/logo2.jpg"
-								height="25" th:src="@{images/logo2.jpg}" /></a></li>
-					</ul>
-				</nav>
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<img src="..\static\images\prop3rty.png" class="img-responsive"
+							th:src="@{images/prop3rty.png}" />
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="nav nav-pills nav-stacked">
+							<li class="active"><a href="#">ACASA</a></li>
+							<li><a href="/apartments">APARTAMENTE</a></li>
+							<li><a href="#">PROPRIETATI COMERCIALE</a></li>
+							<li><a href="#">TERENURI</a></li>
+							<li><a href="#">ZONE</a></li>
+							<li><a href="#">DOCUMENTATIE</a></li>
+							<li><a href="#">CONTACT</a></li>
+						</ul>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<ul class="nav nav-pills nav-stacked">
+							<li><a href="#">DESPRE</a></li>
+							<li><a href="#">LEGAL</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="row">
-				<img class="img-responsive" src="../static/images/avram_iancu.jpg"
-					th:src="@{images/avram_iancu.jpg}" />
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+				<div class="row">
+					<img class="img-responsive" src="../static/images/avram_iancu.jpg"
+						th:src="@{images/avram_iancu.jpg}" />
+				</div>
 			</div>
 		</div>
 	</div>
