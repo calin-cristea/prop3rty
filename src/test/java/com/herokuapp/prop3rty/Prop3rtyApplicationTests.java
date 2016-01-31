@@ -11,7 +11,7 @@ import com.herokuapp.prop3rty.Application;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)
 @WebAppConfiguration
-public class EmsApplicationTests {
+public class Prop3rtyApplicationTests {
 
 	@Test
 	public void contextLoads() {
