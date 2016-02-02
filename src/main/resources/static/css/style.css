@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Julius';
+    src: url('../fonts/JuliusSansOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    src: url('../fonts/ArchitectsDaughter.ttf');
+}
+
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.large {
+    font-size: 20px;
+}
+aside {
+    width: 20%;
+    height: 98vh;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 18px;
+    font-family: 'Julius', Times, serif;
+    float:left;
+}
+aside div {
+    position: absolute;
+    width: 100%;
+}
+aside a {
+    color: #286514;
+    text-decoration: none;    
+}
+aside ul a {
+    margin-left: 8px;
+    color: black;
+}
+aside ul a:hover {
+    margin-left: 0;
+}
+aside ul a:hover:before {
+    content: '|';
+    margin-right: 3px;
+    font-weight: bold;
+    //font-size: 20px;
+}
+ul {
+    list-style-type: none;
+}
+aside ul {
+    padding-left: 0;
+    line-height: 25px;
+}
+.logo {
+    border: 1px solid #62EC36;
+    background: #C2FFAE;
+    color: #286514;
+    padding: 0 5px;
+    line-height: 15px;
+    top: 10%;
+}
+.logo-inner {
+    font-family: 'Julius', Times, serif;
+    font-size: 18px;
+    line-height: 40px;
+}
+.logo-inner span {
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    padding: 5px 15px;
+}
+.logo p {
+    margin: 0;
+    padding: 7px 0;
+}
+.logo .title {
+    border-bottom: 2px solid #286514;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 12px 0;
+}
+.main-menu {
+    top: 30%;
+}
+.secondary-menu {
+    bottom: 10%;    
+}
+.contact {
+    bottom: 5%;
+}
+
+
+.main-content {
+    float: left;
+    width: 70%;
+    margin-left: 35px;
+    font-family: 'ArchitectsDaughter', Times, serif;
+    font-size: 13px;       
+}
+.main-content img.large-image{
+    width: 100%;
+}
+.main-content.bordered {
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+.main-content .centered-text {
+    text-align: center;    
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 95%;
+    width: 75%;
+    border: 1px solid #949494;    
+}
+.outer.half {
+    height: 47%;
+}
+.outer.half:nth-child(2) {
+    top: 50%;
+}
+.outer.quote {
+    border: none;
+    font-size: 32px;
+    top: 1.5%;
+    font-family: 'Julius', Times, serif;
+    z-index: -4;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;    
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 80%;
+}
+img.icon {
+    position: absolute;
+    right: 10px;
+}
+.inner.narrow {
+    width: 60%;
+}
+.inner.wide {
+    width: 90%;
+}
+.inner.fullwidth{
+    width: 100%;
+}
+.inner h1 {
+    font-family: 'Julius', Times, serif;
+    text-align: center;    
+}
+.left-aligned {
+    text-align: left;
+}
+.courthouse {
+    width: 40%;
+}
+input, textarea {
+    margin-bottom: 25px;
+    margin-top: 5px;
+    font-family: 'ArchitectsDaughter', Times, serif;
+    font-size: 11px;
+}
+textarea {
+    padding: 10px;
+    width: 100%;    
+}
+input {
+    padding: 5px 10px;
+    width: 40%;
+}
+input[type='submit'] {
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: #e6e6e6;
+    font-family: 'Julius', Times, serif;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.sell-rent {
+    display: block;
+    width: 50%;
+    border: 1px solid #949494;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Julius', Times, serif;
+    font-size: 50px;
+    margin: auto;
+    line-height: 100px;
+    text-decoration: none;
+    color: #C3C3C3;
+    background: #E6E6E6;
+}
+.sell-rent:hover {
+    color: black;
+}
+
+#login {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+#login input[type='password'], #login input[type='email'], #login input[type='text']  {
+    width: 100%;    
+}
+#login p {
+    text-align: center;
+}
+#login input[type='submit'] {
+    width: 150px;
+    margin-bottom: 10px;
+    background: #B3F09F;
+    border-color: #67C549;
+    color: #286514 ;
+}
