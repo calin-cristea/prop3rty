@@ -164,11 +164,14 @@ img.icon {
 .courthouse {
     width: 40%;
 }
-input, textarea {
+.main-content input, .main-content textarea {
     margin-bottom: 25px;
     margin-top: 5px;
     font-family: 'ArchitectsDaughter', Times, serif;
     font-size: 11px;
+}
+.main-content label {
+    font-weight: 300;
 }
 textarea {
     padding: 10px;
@@ -205,6 +208,10 @@ input[type='submit'] {
 .sell-rent:hover {
     color: black;
 }
+.sell-rent.disabled {
+    pointer-events: none;
+    color: #d9d9d9;
+}
 
 #login {
     width: 70%;
@@ -223,4 +230,35 @@ input[type='submit'] {
     background: #B3F09F;
     border-color: #67C549;
     color: #286514 ;
+}
+.profile-image img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#update-profile input[type='email'], #update-profile input[type='text']  {
+    width: 80%;
+}
+#update-profile a {
+    float: right;
+    margin-right: 20%;
+}
+.main-content .modal-header {
+    border-bottom: none;
+}
+@media (min-width: 768px) {
+    .main-content .modal-dialog {
+        width: 500px;
+        margin: 10% auto;
+    }     
+}
+#changePassword form {
+    width: 90%;    
+    margin: auto;
+}
+#changePassword input[type='password'] {
+    width: 100%;
+}   
+#changePassword input[type='submit'] {
+    width: 150px;
 }
