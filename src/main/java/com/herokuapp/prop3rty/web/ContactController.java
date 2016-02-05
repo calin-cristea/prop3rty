@@ -12,19 +12,35 @@ import com.herokuapp.prop3rty.forms.ContactForm;
 @RequestMapping("/contact")
 public class ContactController {
 
+	/**
+	 * Returns the contact form view.
+	 * @return
+	 */
 	@RequestMapping("/")
 	public ModelAndView index() {
 		ModelAndView view = new ModelAndView("contact");
 		return view;
 	}
 	
+	/**
+	 * Method to handle the post of Contact formular.
+	 * @param contact - the contact form.
+	 * @return success view or error view.
+	 */
 	@RequestMapping(value = "/postContactForm", method = RequestMethod.POST)
 	public ModelAndView saveOrUpdateUser(@ModelAttribute("contactForm") ContactForm contact) {
-		System.out.println("AM INTRAT IN METODA DE POST!");
-		ModelAndView view = new ModelAndView(contact.getName());
-		System.out.println("IESIM DIN METODA DE POST!");
+		boolean success = true;
+		
+		//...
+		
+		ModelAndView returnedView;
+		if(success) { 
+			returnedView = new ModelAndView("contactFormSuccess");
+		} else {
+			returnedView = new ModelAndView("contactFormError");
 
-		return view;
+		}
+		return returnedView;
 		
 	}
 	
