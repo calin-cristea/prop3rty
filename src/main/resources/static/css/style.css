@@ -253,7 +253,8 @@ input[type='submit'] {
 @media (min-width: 768px) {
     .main-content .modal-dialog {
         width: 500px;
-        margin: 10% auto;
+        margin-top: 10%;
+        margin-left: 52%;
     }     
 }
 #changePassword form {
@@ -275,8 +276,10 @@ input[type='submit'] {
 .eval-inputs p {
     float: right;
     margin-right: 20%;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
-.eval-inputs p:nth-child(2) {
+.eval-inputs .margined {
     margin-right: 10%;
 }
 .eval-inputs select, .eval-inputs p input {
@@ -322,4 +325,18 @@ input[type='submit'] {
 .eval-buttons div:nth-child(2) input {
     width: 35%;
     margin-bottom: 5px;
+}
+#chooseAvatar img {
+    float: left;
+    margin: 5px;    
+    cursor: pointer;
+}
+#chooseAvatar img:hover {
+    border: 1px solid black;
+}
+#chooseAvatar img:active, .selected-avatar {
+    border: 1px solid black;
+}
+#uploadPicture label {
+    margin-top: 25px;
 }
