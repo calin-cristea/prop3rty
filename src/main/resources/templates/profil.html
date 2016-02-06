@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Profil | Prop3rty</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript"
+            src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:href="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+        <script type="text/javascript"
+            src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
+            th:href="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
+        <link
+            href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+            th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+            rel="stylesheet" type="text/css" />
+        <link
+            href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css"
+            th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css}"
+            rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <aside>
+            <div class="logo">
+                <a href="#">
+                <p class="title">Prop3rty</p>
+                <p>2015 Olympia Center, Cluj</p>
+                </a>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li><a href="apartamente.html">Apartamente</a></li>
+                    <li><a href="case.html">Case</a></li>
+                    <li><a href="proprietati.html">Proprietati comerciale</a></li>
+                    <li><a href="terenuri.html">Terenuri</a></li>
+                    <li><a href="zone.html">Zone</a></li>
+                    <li><a href="documentatie.html">Documentatie</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="secondary-menu">
+                <ul>
+                    <li><a href="despre.html">Despre</a></li>
+                    <li><a href="legal.html">Legal</a></li>
+                </ul>
+            </div>    
+            <div class="contact">
+                <a href="mailto:info@property.com">info@property.com</a>
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="outer">
+                <a href="login.html"><image class="icon" src="../static/images/user_icon.png" alt="user-icon" width="45"/></a>
+            <div class="middle">            
+            <div class="centered-text inner">
+                <h1>profil</h1>
+                <div style='float:left; width: 35%; margin-right:5%;' class='profile-image'>
+                    <img src='../static/images/old_town.png' alt='profile-image' width='45' id='profileImage' />
+                    <p><a href="#" data-toggle="modal" data-target="#choosePicture">Alege o poza</a></p>
+                </div>
+                <div style='float:left; width: 60%'>
+                    <form method="post" action="" class="left-aligned" id='update-profile'>
+                        <label for="email" class="left-aligned">E-mail</label><br>
+                        <input type="email" name="email" id="email"/><br>
+                        <label for="name" class="left-aligned">Nume</label><br>
+                        <input type="text" name="name" id="name"/><br>
+                        <a href="#" data-toggle="modal" data-target="#changePassword">Schimba parola</a><br>
+                        <input type="submit" name="submit" value="salveaza" />
+                    </form>
+                </div>
+            </div>
+            </div>
+            </div>
+            <!-- Modal -->
+            <div id="changePassword" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>        
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="">                                
+                                <label for="old-password">Parola veche</label><br>
+                                <input type="password" name="old-password" id="old-password"/><br>
+
+                                <label for="new-password">Parola noua</label><br>
+                                <input type="password" name="new-password" id="new-password"/><br>
+
+                                <label for="confirm-password">Confirma parola</label><br>
+                                <input type="password" name="confirm-password" id="confirm-password"/><br>                                
+                                <input type="submit" name="submit" value="schimba parola" /><br>                                
+                            </form>
+                        </div>              
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="choosePicture" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>        
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="" enctype="multipart/form-data" id='chooseAvatar'>                                
+                                <label>Alege o poza</label><br>
+                                <img src='../static/images/avatars/black_man.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/brown_man.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/brown_woman.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/grey_man.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/grey_woman.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/orange_boy.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/orange_girl.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/red_man.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/red_woman.png' alt='avatar'width='75' class='avatar' />
+                                <img src='../static/images/avatars/white_woman.png' alt='avatar'width='75' class='avatar' />
+                                <input type='hidden' value='' id='chosenAvatar'/>                                                       
+                            </form>
+                            <form method="post" action="" enctype="multipart/form-data" id='uploadPicture'>                                
+                                <label for="picture">Incarca o poza</label><br>
+                                <input type="file" name="picture" id="picture" /><br>
+                                <input type="submit" name="submit" value="salveaza" /><br>                                                                  
+                            </form>
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </div>
+     <script type="text/javascript" src="../static/js/property.js"></script> 
+    </body>
+</html>

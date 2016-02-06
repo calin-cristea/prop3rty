@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Julius';
+    src: url('../fonts/JuliusSansOne-Regular.ttf');
+}
+@font-face {
+    font-family: 'ArchitectsDaughter';
+    src: url('../fonts/ArchitectsDaughter.ttf');
+}
+
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.large {
+    font-size: 20px;
+}
+aside {
+    width: 20%;
+    height: 98vh;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 18px;
+    font-family: 'Julius', Times, serif;
+    float:left;
+}
+aside div {
+    position: absolute;
+    width: 100%;
+}
+aside a {
+    color: #286514;
+    text-decoration: none;    
+}
+aside ul a {
+    margin-left: 8px;
+    color: black;
+}
+aside ul a:hover {
+    margin-left: 0;
+}
+aside ul a:hover:before {
+    content: '|';
+    margin-right: 3px;
+    font-weight: bold;
+    //font-size: 20px;
+}
+ul {
+    list-style-type: none;
+}
+aside ul {
+    padding-left: 0;
+    line-height: 25px;
+}
+.logo {
+    border: 1px solid #62EC36;
+    background: #C2FFAE;
+    color: #286514;
+    padding: 0 5px;
+    line-height: 15px;
+    top: 10%;
+}
+.logo-inner {
+    font-family: 'Julius', Times, serif;
+    font-size: 18px;
+    line-height: 40px;
+}
+.logo-inner span {
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    padding: 5px 15px;
+}
+.logo p {
+    margin: 0;
+    padding: 7px 0;
+}
+.logo .title {
+    border-bottom: 2px solid #286514;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 12px 0;
+}
+.main-menu {
+    top: 30%;
+}
+.secondary-menu {
+    bottom: 10%;    
+}
+.contact {
+    bottom: 5%;
+}
+
+
+.main-content {
+    float: left;
+    width: 70%;
+    margin-left: 35px;
+    font-family: 'ArchitectsDaughter', Times, serif;
+    font-size: 13px;       
+}
+.main-content img.large-image{
+    width: 100%;
+}
+.main-content.bordered {
+    border: 1px solid black;
+    padding: 10px 30px;
+}
+.main-content .centered-text {
+    text-align: center;    
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 95%;
+    width: 75%;
+    border: 1px solid #949494;    
+}
+.outer.half {
+    height: 47%;
+}
+.outer.half:nth-child(2) {
+    top: 50%;
+}
+.outer.quote {
+    border: none;
+    font-size: 32px;
+    top: 1.5%;
+    font-family: 'Julius', Times, serif;
+    z-index: -4;
+}
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;    
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 80%;
+}
+img.icon {
+    position: absolute;
+    right: 10px;
+    width: 35px;
+}
+.inner.narrow {
+    width: 60%;
+}
+.inner.wide {
+    width: 90%;
+}
+.inner.fullwidth{
+    width: 100%;
+}
+.inner h1 {
+    font-family: 'Julius', Times, serif;
+    text-align: center;    
+}
+.left-aligned {
+    text-align: left;
+}
+.right-aligned {
+    text-align: right;
+}
+.courthouse {
+    width: 40%;
+}
+.main-content input, .main-content textarea {
+    margin-bottom: 25px;
+    margin-top: 5px;
+    font-family: 'ArchitectsDaughter', Times, serif;
+    font-size: 11px;
+}
+.main-content label {
+    font-weight: 300;
+}
+textarea {
+    padding: 10px;
+    width: 100%;    
+}
+input {
+    padding: 5px 10px;
+    width: 40%;
+}
+input[type='submit'] {
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background: #e6e6e6;
+    font-family: 'Julius', Times, serif;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.sell-rent {
+    display: block;
+    width: 50%;
+    border: 1px solid #949494;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Julius', Times, serif;
+    font-size: 50px;
+    margin: auto;
+    line-height: 100px;
+    text-decoration: none;
+    color: #C3C3C3;
+    background: #E6E6E6;
+}
+.sell-rent:hover {
+    color: black;
+}
+.sell-rent.disabled {
+    pointer-events: none;
+    color: #d9d9d9;
+}
+
+#login {
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+#login input[type='password'], #login input[type='email'], #login input[type='text']  {
+    width: 100%;    
+}
+#login p {
+    text-align: center;
+}
+#login input[type='submit'] {
+    width: 150px;
+    margin-bottom: 10px;
+    background: #B3F09F;
+    border-color: #67C549;
+    color: #286514 ;
+}
+.profile-image img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#update-profile input[type='email'], #update-profile input[type='text']  {
+    width: 80%;
+}
+#update-profile a {
+    float: right;
+    margin-right: 20%;
+}
+.main-content .modal-header {
+    border-bottom: none;
+}
+@media (min-width: 768px) {
+    .main-content .modal-dialog {
+        width: 500px;
+        margin-top: 10%;
+        margin-left: 52%;
+    }     
+}
+#changePassword form {
+    width: 90%;    
+    margin: auto;
+}
+#changePassword input[type='password'] {
+    width: 100%;
+}   
+#changePassword input[type='submit'] {
+    width: 150px;
+}
+
+.eval-inputs {
+    float: left;
+    width: 30%;
+    
+}
+.eval-inputs p {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.eval-inputs .margined {
+    margin-right: 10%;
+}
+.eval-inputs select, .eval-inputs p input {
+    padding: 2px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0;
+    font-family: 'ArchitectsDaughter', Times, serif;
+    font-size: 10px;
+    box-shadow: -4px 5px 10px grey;    
+}
+.eval-inputs select {
+    width: 170px;
+}
+.eval-inputs p input {
+    width: 50px;
+}
+.eval-inputs input[type='checkbox'] {
+    width: initial;
+}
+.cluj-areas {
+    width: 70%;
+    float: left;
+}
+.cluj-areas img {
+    width: 100%;
+}
+.eval-buttons {
+    font-family: 'Julius';
+    font-size: 22px;    
+}
+.eval-buttons input[type='text'] {
+    width: 15%;
+    font-family: 'Julius';
+    font-size: 22px;
+    border-radius: 5px;
+    border: 1px solid black;   
+}
+.eval-buttons input[type='submit'] {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.eval-buttons div:nth-child(2) input {
+    width: 35%;
+    margin-bottom: 5px;
+}
+#chooseAvatar img {
+    float: left;
+    margin: 5px;    
+    cursor: pointer;
+}
+#chooseAvatar img:hover {
+    border: 1px solid black;
+}
+#chooseAvatar img:active, .selected-avatar {
+    border: 1px solid black;
+}
+#uploadPicture label {
+    margin-top: 25px;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Vanzare apartamente | Prop3rty</title>
+        <title>Vanzare case | Prop3rty</title>
         <link rel="stylesheet" type="text/css" href="../static/css/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,13 +68,13 @@
                         </select>
                         </p>
                         <p class='right-aligned margined'>
-                        	<label for='area'>Suprafata</label>
-                        	<input type='text' name='area' id='area' /> mp
+                            <label for='area'>Suprafata cladire</label>
+                            <input type='text' name='area' id='area' /> mp
                         </p>
-                        <p>
-                        	<label for='isolation'>Izolare terminca</label>
-                        	<input type='checkbox' name='isolation' id='isolation' value='yes' />
-                        </p>
+                        <p class='right-aligned margined'>
+                            <label for='area'>Suprafata teren</label>
+                            <input type='text' name='area' id='area' /> mp
+                        </p>    
                         <p>
                             <select name='state'>
                                 <option selected='selected' disabled='disabled'>Finisaje</option>
@@ -85,13 +85,25 @@
                             </select>
                         </p>
                         <p>
-                        	<label for='heating'>Incalzire centrala</label>
-                        	<input type='checkbox' name='heating' id='heating' value='yes' />
+                            <label for='heating'>Incalzire centrala</label>
+                            <input type='checkbox' name='heating' id='heating' value='yes' />
                         </p>
-                        <p class='right-aligned'>
-                        	<label for='floor'>Etaj/nivel</label>
-                        	<input type='text' name='floor' id='floor' />
-                        </p>                  
+                        <p>
+                            <label for='gas'>Gaz</label>
+                            <input type='checkbox' name='utilities' value='gas' id='gas' />                            
+                        </p>    
+                        <p>
+                            <label for='sewage'>Apa curenta, canalizare</label>
+                            <input type='checkbox' name='utilities' value='sewage' id='sewage' />                            
+                        </p>
+                        <p>
+                            <label for='electricty'>Electricitate</label>
+                            <input type='checkbox' name='utilities' value='electricty' id='electricty' />                            
+                        </p>
+                        <p class='right-aligned margined'>
+                            <label for='front'>Front strada</label>
+                            <input type='front' name='street' id='front' /> ml
+                        </p>                    
                     </div>
                     <div class='cluj-areas'>
                         <img src="../static/images/cluj_areas.jpg" alt='cluj-areas' width='100' />

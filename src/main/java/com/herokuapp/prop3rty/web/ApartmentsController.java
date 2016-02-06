@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/apartments")
 public class ApartmentsController {
 	
-	@RequestMapping("")
+	@RequestMapping("/")
 	public ModelAndView index() {
 		ModelAndView view = new ModelAndView("apt_sell");
 		return view;
