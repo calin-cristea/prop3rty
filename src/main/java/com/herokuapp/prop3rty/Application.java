@@ -20,7 +20,7 @@ public class Application {
 
 	@Bean
 	public UserDAO employeeDao() {
-		return new UserRepository("postgresql.cristeanet.com", "5432", "prop3rty", "prop3rty", "King.Bury.15");
+		return new UserRepository("postgresql.cristeanet.com", "5432", "prop3rty", "prop3rty", "user.prop3rty");
 
 	}
 
