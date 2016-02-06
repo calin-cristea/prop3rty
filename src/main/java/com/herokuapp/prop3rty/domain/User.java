@@ -7,6 +7,10 @@ public class User extends AbstractModel {
 	private String firstName;
 	private String lastName;
 	private String phone;
+	
+	public User() {
+		role = Role.USER;
+	}
 
 	public Role getRole() {
 		return role;
