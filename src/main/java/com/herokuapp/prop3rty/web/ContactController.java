@@ -16,7 +16,7 @@ public class ContactController {
 	 * Returns the contact form view.
 	 * @return
 	 */
-	@RequestMapping("/")
+	@RequestMapping("")
 	public ModelAndView index() {
 		ModelAndView view = new ModelAndView("contact");
 		return view;
