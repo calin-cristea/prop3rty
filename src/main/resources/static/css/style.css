@@ -16,6 +16,9 @@
 .large {
     font-size: 20px;
 }
+body {
+    background-color: #EFEBE9;
+}
 aside {
     width: 20%;
     height: 98vh;
@@ -40,12 +43,21 @@ aside ul a {
 }
 aside ul a:hover {
     margin-left: 0;
+    text-decoration: none;
+    color: inherit;
 }
 aside ul a:hover:before {
     content: '|';
     margin-right: 3px;
+    font-weight: bold;    
+}
+aside ul a.active {
+    margin-left: 0;
+}
+aside ul a.active:before {
+    content: '|';
+    margin-right: 3px;
     font-weight: bold;
-    //font-size: 20px;
 }
 ul {
     list-style-type: none;
@@ -114,14 +126,47 @@ aside ul {
     display: table;
     position: absolute;
     height: 95%;
-    width: 75%;
-    border: 1px solid #949494;    
+    width: 75%;       
 }
 .outer.half {
-    height: 47%;
+    height: 45%;   
 }
 .outer.half:nth-child(2) {
-    top: 50%;
+    top: 52%;
+}
+.apartments .outer.half:nth-child(1) {
+    background: url('../images/Apartament_1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.apartments .outer.half:nth-child(2) {
+    background: url('../images/Apartament_2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.houses .outer.half:nth-child(1) {
+    background: url('../images/Case_3.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.houses .outer.half:nth-child(2) {
+    background: url('../images/Case_2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.comm .outer.half:nth-child(1) {
+    background: url('../images/Spatii_1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.comm .outer.half:nth-child(2) {
+    background: url('../images/Spatii_2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.land .outer.half:nth-child(1) {
+    background: url('../images/Teren_1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.land .outer.half:nth-child(2) {
+    background: url('../images/Teren_2.jpg') no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
 }
 .outer.quote {
     border: none;
@@ -143,6 +188,8 @@ aside ul {
 }
 img.icon {
     position: absolute;
+    top: 5px;
+
     right: 10px;
     width: 35px;
 }
@@ -196,9 +243,10 @@ input[type='submit'] {
     cursor: pointer;
 }
 .sell-rent {
+    opacity: 0.8;
     display: block;
     width: 50%;
-    border: 1px solid #949494;
+    border: 1px solid black;
     border-radius: 10px;
     text-transform: uppercase;
     font-family: 'Julius', Times, serif;
@@ -206,8 +254,9 @@ input[type='submit'] {
     margin: auto;
     line-height: 100px;
     text-decoration: none;
-    color: #C3C3C3;
+    color: #595959;
     background: #E6E6E6;
+    box-shadow: 3px 5px 10px black;
 }
 .sell-rent:hover {
     color: black;
@@ -339,4 +388,16 @@ input[type='submit'] {
 }
 #uploadPicture label {
     margin-top: 25px;
+}
+.zones .inner img {
+    display: block; 
+    width: 100%;
+    margin-bottom: 15px;
+}
+.zones .inner div{
+    width: 45%;
+    float: left;    
+}
+.zones .inner div:nth-child(1) {
+    margin-right: 15px;
 }
