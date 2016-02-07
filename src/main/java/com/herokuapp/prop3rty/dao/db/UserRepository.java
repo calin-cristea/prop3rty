@@ -122,12 +122,12 @@ public class UserRepository implements UserDAO {
 			PreparedStatement ps = null;
 			if (model.getId() > 0) {
 				ps = connection.prepareStatement(
-						"update 'user' set email=?, pass=?, firstname=?, lastname=?, phone=?, role = ? "
+						"update \"user\" set email=?, pass=?, firstname=?, lastname=?, phone=?, role = ? "
 								+ "where id = ? returning id");
 
 			} else {
 
-				ps = connection.prepareStatement("insert into 'user' (email, pass, firstname, lastname, phone, role) "
+				ps = connection.prepareStatement("insert into \"user\" (email, pass, firstname, lastname, phone, role) "
 						+ "values (?, ?, ?, ?, ?, ?) returning id");
 
 			}
@@ -171,7 +171,7 @@ public class UserRepository implements UserDAO {
 		Connection connection = newConnection();
 		try {
 			Statement statement = connection.createStatement();
-			result = statement.execute("delete from 'user' where id = " + model.getId());
+			result = statement.execute("delete from \"user\" where id = " + model.getId());
 			connection.commit();
 		} catch (SQLException ex) {
 
@@ -199,7 +199,7 @@ public class UserRepository implements UserDAO {
 		Collection<User> result = new LinkedList<>();
 
 		try (ResultSet rs = connection.createStatement()
-				.executeQuery("select * from 'user' where lower(firstname || ' ' || lastname) like '%"
+				.executeQuery("select * from \"user\" where lower(firstname || ' ' || lastname) like '%"
 						+ query.toLowerCase() + "%'")) {
 
 			while (rs.next()) {

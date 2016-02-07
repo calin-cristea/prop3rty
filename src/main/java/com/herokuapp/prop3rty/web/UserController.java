@@ -25,11 +25,13 @@ public class UserController {
 	@RequestMapping("/register")
 	public ModelAndView register() {
 		ModelAndView view = new ModelAndView("register");
+		view.addObject(new User());
 		return view;
 	}
 	
-	@RequestMapping(value = "/register", method = RequestMethod.POST, params = "action=add")
-	public void createUser(User user) {
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public ModelAndView createUser(User user) {
 		userService.save(user);
+		return login();
 	}
 }
