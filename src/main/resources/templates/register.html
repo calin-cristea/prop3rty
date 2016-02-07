@@ -17,19 +17,19 @@
 		</div>
 		<div class="main-menu">
 			<ul>
-				<li><a href="apartamente.html">Apartamente</a></li>
-				<li><a href="case.html">Case</a></li>
-				<li><a href="proprietati.html">Proprietati comerciale</a></li>
-				<li><a href="terenuri.html">Terenuri</a></li>
-				<li><a href="zone.html">Zone</a></li>
-				<li><a href="documentatie.html">Documentatie</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="/apartments">Apartamente</a></li>
+				<li><a href="/houses">Case</a></li>
+				<li><a href="/comm">Proprietati comerciale</a></li>
+				<li><a href="/lands">Terenuri</a></li>
+				<li><a href="/zone">Zone</a></li>
+				<li><a href="/docs">Documentatie</a></li>
+				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
 		<div class="secondary-menu">
 			<ul>
-				<li><a href="despre.html">Despre</a></li>
-				<li><a href="legal.html">Legal</a></li>
+				<li><a href="/about">Despre</a></li>
+				<li><a href="/legal">Legal</a></li>
 			</ul>
 		</div>
 		<div class="contact">
@@ -44,7 +44,8 @@
 			<div class="middle">
 				<div class="centered-text inner narrow">
 					<h1>inregistrare user nou</h1>
-					<form method="post" id="login" th:action="@{register}" th:object="${user}" >
+					<form method="post" id="login" th:action="@{register}"
+						th:object="${user}">
 						<label class='left-aligned'>E-mail*</label><br /> <input
 							type="email" name="email" id="email" th:field="${user.email}" /><br />
 						<label for="password">Parola*</label><br /> <input
@@ -58,7 +59,7 @@
 							th:field="${user.lastName}" /><br /> <label for="phone">Telefon</label><br />
 						<input type="text" name="phone" id="phone"
 							th:field="${user.phone}" /><br />
-							<!--  <input type="hidden" th:field="${user.id}" name="id" id="id" /> -->
+						<!--  <input type="hidden" th:field="${user.id}" name="id" id="id" /> -->
 						<p>
 							<input type="submit" name="submit" value="creeaza cont" /><br />
 						</p>

@@ -5,24 +5,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/houses")
-public class HousesController {
-
+@RequestMapping("/comm")
+public class CommController {
+	
 	@RequestMapping("")
 	public ModelAndView index() {
-		ModelAndView view = new ModelAndView("case");
+		ModelAndView view = new ModelAndView("proprietati");
 		return view;
 	}
 
-	@RequestMapping("/house_sell")
+	@RequestMapping("/comm_sell")
 	public ModelAndView sell() {
-		ModelAndView view = new ModelAndView("house_sell");
+		ModelAndView view = new ModelAndView("comm_sell");
 		return view;
 	}
 
-	@RequestMapping("/house_rent")
+	@RequestMapping("/comm_rent")
 	public ModelAndView rent() {
-		ModelAndView view = new ModelAndView("house_rent");
+		ModelAndView view = new ModelAndView("comm_rent");
 		return view;
 	}
 }

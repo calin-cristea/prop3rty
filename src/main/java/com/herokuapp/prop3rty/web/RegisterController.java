@@ -10,17 +10,10 @@ import com.herokuapp.prop3rty.domain.User;
 import com.herokuapp.prop3rty.service.UserService;
 
 @Controller
-@RequestMapping("/users")
-public class UserController {
-
+public class RegisterController {
+	
 	@Autowired
 	UserService userService;
-
-	@RequestMapping("")
-	public ModelAndView login() {
-		ModelAndView view = new ModelAndView("login");
-		return view;
-	}
 	
 	@RequestMapping("/register")
 	public ModelAndView register() {
@@ -30,8 +23,8 @@ public class UserController {
 	}
 	
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public ModelAndView createUser(User user) {
+	public String createUser(User user) {
 		userService.save(user);
-		return login();
+		return "redirect:/users";
 	}
 }
