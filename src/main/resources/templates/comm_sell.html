@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Vanzare proprietati comerciale | Prop3rty</title>
-<link rel="stylesheet" type="text/css" href="../static/css/style.css"
-	th:href="@{/css/style.css}" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<aside>
 		<div class="logo">
-			<a href="/">
+			<a href="#">
 				<p class="title">Prop3rty</p>
 				<p>2015 Olympia Center, Cluj</p>
 			</a>
@@ -20,7 +18,7 @@
 			<ul>
 				<li><a href="/apartments">Apartamente</a></li>
 				<li><a href="/houses">Case</a></li>
-				<li><a href="/comm">Proprietati comerciale</a></li>
+				<li><a href="/comm" class='active'>Proprietati comerciale</a></li>
 				<li><a href="/lands">Terenuri</a></li>
 				<li><a href="/zone">Zone</a></li>
 				<li><a href="/docs">Documentatie</a></li>
@@ -39,9 +37,7 @@
 	</aside>
 	<div class="main-content">
 		<div class="outer">
-			<a href="/users"><image class="icon"
-					src="../static/images/user_icon.png"
-					th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
+			<a href="/users"><image class="icon" src="../static/images/user_icon.png" th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
 			<div class="middle">
 				<div class="left-aligned inner wide">
 					<form method='post' action='' class='evaluation'>
@@ -72,25 +68,19 @@
 								</select>
 							</p>
 							<p class='right-aligned margined'>
-								<label for='area'>Suprafata</label> <input type='text'
-									name='area' id='area' /> mp
+								<label for='area'>Suprafata</label> <input type='text' name='area' id='area' /> mp
 							</p>
 							<p>
-								<label for='gas'>Gaz</label> <input type='checkbox'
-									name='utilities' value='gas' id='gas' />
+								<label for='gas'>Gaz</label> <input type='checkbox' name='utilities' value='gas' id='gas' />
 							</p>
 							<p>
-								<label for='sewage'>Apa curenta, canalizare</label> <input
-									type='checkbox' name='utilities' value='sewage' id='sewage' />
+								<label for='sewage'>Apa curenta, canalizare</label> <input type='checkbox' name='utilities' value='sewage' id='sewage' />
 							</p>
 							<p>
-								<label for='electricty'>Electricitate</label> <input
-									type='checkbox' name='utilities' value='electricty'
-									id='electricty' />
+								<label for='electricty'>Electricitate</label> <input type='checkbox' name='utilities' value='electricty' id='electricty' />
 							</p>
 							<p>
-								<label for='heating'>Incalzire centrala</label> <input
-									type='checkbox' name='heating' id='heating' value='yes' />
+								<label for='heating'>Incalzire centrala</label> <input type='checkbox' name='heating' id='heating' value='yes' />
 							</p>
 							<p>
 								<select name='state'>
@@ -102,24 +92,22 @@
 								</select>
 							</p>
 							<p class='right-aligned margined'>
-								<label for='front'>Front strada</label> <input type='front'
-									name='street' id='front' /> ml
+								<label for='front'>Front strada</label> <input type='front' name='street' id='front' /> ml
 							</p>
 						</div>
 						<div class='cluj-areas'>
-							<img src="../static/images/cluj_areas.jpg"
-								th:src="@{/images/cluj_areas.jpg}" alt='cluj-areas' width='100' />
+							<img src="../static/images/cluj_areas.jpg" th:src="@{/images/cluj_areas.jpg}" alt='cluj-areas' width='100' />
 						</div>
 						<div class='eval-buttons centered-text'>
 							<div>
-								<input type='submit' name='eval' value='eval' /> <label
-									for='price'>Pret</label> <input type='text' id='price' readonly />
-								&euro; <input type='submit' name='reeval' value='recalc' />
+								<input type='submit' name='eval' value='eval' /> <label for='price'>Pret</label> <input type='text' id='price' readonly /> &euro; <input
+									type='submit' name='reeval' value='recalc'
+								/>
 							</div>
 							<div>
-								<input type='submit' name='saveResult'
-									value='Salveaza rezultatele' /> <input type='submit'
-									name='sendResult' value='Triite rezultatele pe mail' />
+								<input type='submit' name='saveResult' value='Salveaza rezultatele' /> <input type='submit' name='sendResult'
+									value='Triite rezultatele pe mail'
+								/>
 							</div>
 						</div>
 					</form>
@@ -128,125 +116,4 @@
 		</div>
 	</div>
 </body>
-=======
-<html>
-    <head>
-        <title>Vanzare proprietati comerciale | Prop3rty</title>
-        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <aside>
-            <div class="logo">
-                <a href="#">
-                <p class="title">Prop3rty</p>
-                <p>2015 Olympia Center, Cluj</p>
-                </a>
-            </div>
-            <div class="main-menu">
-                <ul>
-                    <li><a href="apartamente.html">Apartamente</a></li>
-                    <li><a href="case.html">Case</a></li>
-                    <li><a href="proprietati.html" class='active'>Proprietati comerciale</a></li>
-                    <li><a href="terenuri.html">Terenuri</a></li>
-                    <li><a href="zone.html">Zone</a></li>
-                    <li><a href="documentatie.html">Documentatie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="secondary-menu">
-                <ul>
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="legal.html">Legal</a></li>
-                </ul>
-            </div>    
-            <div class="contact">
-                <a href="mailto:info@property.com">info@property.com</a>
-            </div>
-        </aside>
-        <div class="main-content">
-            <div class="outer">
-                <a href="login.html"><image class="icon" src="../static/images/user_icon.png" alt="user-icon" width="45"/></a>
-            <div class="middle">            
-            <div class="left-aligned inner wide">
-                <form method='post' action='' class='evaluation'>
-                    <div class='eval-inputs'>
-                        <p>
-                        <select name='zone'>
-                            <option selected='selected' disabled='disabled'>Zona</option>
-                            <option>Andrei Muresanu</option>
-                            <option>Becas</option>
-                            <option>Borhanci</option>
-                            <option>Bulgaria</option>
-                            <option>Buna Ziua</option>
-                            <option>Centru</option>
-                            <option>Dambul Rotund</option>
-                            <option>Europa</option>
-                            <option>Faget</option>
-                            <option>Iris</option>
-                            <option>Gheorgheni</option>
-                            <option>Grigorescu</option>
-                            <option>Gruia</option>
-                            <option>Intre Lacuri</option>
-                            <option>Manastur</option>
-                            <option>Marasti</option>
-                            <option>Plopilor</option>
-                            <option>Someseni</option>                 
-                            <option>Sopor</option>
-                            <option>Zorilor</option>                  
-                        </select>
-                        </p>
-                        <p class='right-aligned margined'><label for='area'>Suprafata</label>
-                        <input type='text' name='area' id='area' /> mp</p>
-                        <p>
-                            <label for='gas'>Gaz</label>
-                            <input type='checkbox' name='utilities' value='gas' id='gas' />                            
-                        </p>    
-                        <p>
-                            <label for='sewage'>Apa curenta, canalizare</label>
-                            <input type='checkbox' name='utilities' value='sewage' id='sewage' />                            
-                        </p>
-                        <p>
-                            <label for='electricty'>Electricitate</label>
-                            <input type='checkbox' name='utilities' value='electricty' id='electricty' />                            
-                        </p>                          
-                        <p>
-                            <label for='heating'>Incalzire centrala</label>
-                            <input type='checkbox' name='heating' id='heating' value='yes' />
-                        </p>
-                        <p>
-                            <select name='state'>
-                                <option selected='selected' disabled='disabled'>Finisaje</option>
-                                <option>nu</option>
-                                <option>asa-si-asa</option>
-                                <option>da</option>
-                                <option>lux</option>
-                            </select>
-                        </p>
-                        <p class='right-aligned margined'><label for='front'>Front strada</label>
-                        <input type='front' name='street' id='front' /> ml</p>                                        
-                    </div>
-                    <div class='cluj-areas'>
-                        <img src="../static/images/cluj_areas.jpg" alt='cluj-areas' width='100' />
-                    </div>
-                    <div class='eval-buttons centered-text'>
-                        <div>
-                            <input type='submit' name='eval' value='eval' />
-                            <label for='price'>Pret</label>
-                            <input type='text' id='price' readonly/> &euro;
-                            <input type='submit' name='reeval' value='recalc' />
-                        </div>
-                        <div>
-                            <input type='submit' name='saveResult' value='Salveaza rezultatele' />
-                            <input type='submit' name='sendResult' value='Triite rezultatele pe mail' />
-                        </div>
-                    </div>      
-                </form>
-            </div>
-            </div>
-            </div>
-        </div>
-    </body>
->>>>>>> refs/heads/develop
 </html>

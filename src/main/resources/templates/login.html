@@ -2,8 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Contul meu | Prop3rty</title>
-<link rel="stylesheet" type="text/css" href="../static/css/style.css"
-	th:href="@{/css/style.css}" />
+<link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}" th:href="@{/css/style.css}" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -38,20 +37,17 @@
 	</aside>
 	<div class="main-content">
 		<div class="outer">
-			<a href="/users"><image class="icon"
-					src="../static/images/user_icon.png"
-					th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
+			<a href="/users"><image class="icon" src="../static/images/user_icon.png" th:src="@{/images/user_icon.png}" th:src="@{/images/user_icon.png}"
+					alt="user-icon" width="45"
+				/></a>
 			<div class="middle">
 				<div class="centered-text inner narrow">
 					<h1>Contul meu</h1>
 					<form method="post" action="" id="login">
-						<label class='left-aligned' for="name">E-mail*</label><br /> <input
-							type="email" name="email" id="email" /><br /> <label
-							for="password">Parola*</label><br /> <input type="password"
-							name="password" id="password" /><br />
+						<label class='left-aligned' for="name">E-mail*</label><br /> <input type="email" name="email" id="email" /><br /> <label for="password">Parola*</label><br />
+						<input type="password" name="password" id="password" /><br />
 						<p>
-							<input type="submit" name="submit" value="intra in cont" /><br />
-							Nu ai cont? Creeaza unul <a href="/register">aici</a>
+							<input type="submit" name="submit" value="intra in cont" /><br /> Nu ai cont? Creeaza unul <a href="/register">aici</a>
 						</p>
 					</form>
 				</div>
