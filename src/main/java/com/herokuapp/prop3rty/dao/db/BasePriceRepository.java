@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.herokuapp.prop3rty.dao.BasePriceDAO;
@@ -13,9 +14,9 @@ import com.herokuapp.prop3rty.domain.AssetModel;
 
 @Repository
 public class BasePriceRepository implements BasePriceDAO {
-	
+
 	private final Logger log = LoggerFactory.getLogger(getClass());
-	
+
 	@Autowired
 	private JdbcTemplate jdbc;
 
@@ -45,7 +46,17 @@ public class BasePriceRepository implements BasePriceDAO {
 
 	@Override
 	public AssetModel getByAssetAndZone(String query) {
-		return jdbc.queryForObject(sql, rowMapper, args);
+		return jdbc.execute("se", query);
 	}
 
+	private RowMapper<AssetModel> assetMapper = new RowMapper<AssetModel> {
+		
+		
+	}
+
+	@Override
+	public AssetModel searchByAssetAndZone(String query) {
+		jdbc.// TODO Auto-generated method stub
+		return null;
+	}
 }
