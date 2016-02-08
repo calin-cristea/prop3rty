@@ -5,11 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class IndexController {
-
-	@RequestMapping("/")
+@RequestMapping("/docs")
+public class DocsController {
+	
+	@RequestMapping("")
 	public ModelAndView index() {
-		ModelAndView view = new ModelAndView("index");
+		ModelAndView view = new ModelAndView("documentatie");
 		return view;
 	}
+	
 }

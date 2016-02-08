@@ -87,7 +87,7 @@ public class UserRepository implements UserDAO {
 	}
 
 	@Override
-	public User findById(Long id) {
+	public User getById(Long id) {
 		Connection connection = newConnection();
 
 		List<User> result = new LinkedList<>();
