@@ -4,5 +4,5 @@ import com.herokuapp.prop3rty.domain.AssetModel;
 
 public interface BasePriceDAO extends BaseDAO<AssetModel> {
 
-	AssetModel getByAssetAndZone (String query);
+	AssetModel getByAssetAndZone(String query);
 }
