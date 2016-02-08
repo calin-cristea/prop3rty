@@ -1,10 +1,8 @@
 package com.herokuapp.prop3rty.dao;
 
-import java.util.Collection;
+import com.herokuapp.prop3rty.domain.AssetModel;
 
-import com.herokuapp.prop3rty.domain.Apartment;
+public interface BasePriceDAO extends BaseDAO<AssetModel> {
 
-public interface ApartmentDAO extends BaseDAO<Apartment>{
-
-	Collection<Apartment> searchByName(String query);
+	AssetModel getByAssetAndZone (String query);
 }
