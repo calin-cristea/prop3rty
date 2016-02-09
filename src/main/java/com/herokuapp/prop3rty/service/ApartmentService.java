@@ -11,13 +11,8 @@ public class ApartmentService {
 	private BasePriceDAO dao;
 	
 	public double evaluate(Apartment apt) {
-		double finalPrice = getBasePrice() * apt.getArea() * apt.getThermalInsulation().value * apt.getCentralHeating().value * apt.getFinishing().value;
-		return finalPrice;
-		
-	}
-	
-	private int getBasePrice() {
-		return dao.getByAssetAndZone("ca");
+		return dao.getByAssetAndZone(apt).getPrice() * apt.getArea() * apt.getThermalInsulation().getValue() * apt.getCentralHeating().getValue() * apt.getFinishing().getValue();
+				
 	}
 	
 }

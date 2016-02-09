@@ -6,11 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.herokuapp.prop3rty.dao.BasePriceDAO;
 import com.herokuapp.prop3rty.domain.AssetModel;
+import com.herokuapp.prop3rty.domain.BasePrice;
 
 @Repository
 public class BasePriceRepository implements BasePriceDAO {
@@ -19,6 +19,11 @@ public class BasePriceRepository implements BasePriceDAO {
 
 	@Autowired
 	private JdbcTemplate jdbc;
+
+	public BasePrice getByAssetAndZone(AssetModel asset) {
+		String sql = "SELECT * FROM baseprice WHERE asset = ? AND zone = ?";
+		return jdbc.queryForObject(sql, BasePrice.class, asset.getAssetType().name(), asset.getZone());
+	}
 
 	@Override
 	public Collection<AssetModel> getAll() {
@@ -44,19 +49,4 @@ public class BasePriceRepository implements BasePriceDAO {
 		return false;
 	}
 
-	@Override
-	public AssetModel getByAssetAndZone(String query) {
-		return jdbc.execute("se", query);
-	}
-
-	private RowMapper<AssetModel> assetMapper = new RowMapper<AssetModel> {
-		
-		
-	}
-
-	@Override
-	public AssetModel searchByAssetAndZone(String query) {
-		jdbc.// TODO Auto-generated method stub
-		return null;
-	}
 }
