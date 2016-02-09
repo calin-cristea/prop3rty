@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.herokuapp.prop3rty.domain.Apartment;
 import com.herokuapp.prop3rty.service.ApartmentService;
 
 @Controller
@@ -26,14 +27,17 @@ public class ApartmentsController {
 	}
 
 	@RequestMapping("/apt_sell")
-	public String sell() {
-		//ModelAndView view = new ModelAndView("apt_sell");
-		return "apt_sell";
+	public ModelAndView sell() {
+		ModelAndView view = new ModelAndView("apt_sell");
+		view.addObject(new Apartment());
+		return view;
 	}
 	
 	@RequestMapping(value = "/apt_sell", method = RequestMethod.POST)
-	public String sellEval() {
-		//ModelAndView view = new ModelAndView("apt_sell");
+	public String sellEval(Apartment apt) {
+		aptService.evaluate(apt);
+		ModelAndView view = new ModelAndView("apt_sell");
+		view.addObject("aptEval", aptService.evaluate(apt));
 		return "apt_sell";
 	}
 
