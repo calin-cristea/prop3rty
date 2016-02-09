@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Zone | Prop3rty</title>
-        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <aside>
-            <div class="logo">
-                <a href="#">
-                <p class="title">Prop3rty</p>
-                <p>2015 Olympia Center, Cluj</p>
-                </a>
-            </div>
-            <div class="main-menu">
-                <ul>
-                    <li><a href="apartamente.html">Apartamente</a></li>
-                    <li><a href="case.html">Case</a></li>
-                    <li><a href="proprietati.html">Proprietati comerciale</a></li>
-                    <li><a href="terenuri.html">Terenuri</a></li>
-                    <li><a href="zone.html">Zone</a></li>
-                    <li><a href="documentatie.html">Documentatie</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="secondary-menu">
-                <ul>
-                    <li><a href="despre.html">Despre</a></li>
-                    <li><a href="legal.html">Legal</a></li>
-                </ul>
-            </div>    
-            <div class="contact">
-                <a href="mailto:info@property.com">info@property.com</a>
-            </div>
-        </aside>
-        <div class="main-content">            
-            <div class="outer">                
-            <div class="middle">            
-            <div class="inner wide">
-                <img class="large-image" src="../static/images/old_town.png" alt="oldtown" width="500" />               
-            </div>
-            </div>
-            </div>
-        </div>
-    </body>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Zone | Prop3rty</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<aside>
+		<div class="logo">
+			<a href="#">
+				<p class="title">Prop3rty</p>
+				<p>2015 Olympia Center, Cluj</p>
+			</a>
+		</div>
+		<div class="main-menu">
+			<ul>
+				<li><a href="/apartments">Apartamente</a></li>
+				<li><a href="/houses">Case</a></li>
+				<li><a href="/comm">Proprietati comerciale</a></li>
+				<li><a href="/lands">Terenuri</a></li>
+				<li><a href="/zone">Zone</a></li>
+				<li><a href="/docs">Documentatie</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="secondary-menu">
+			<ul>
+				<li><a href="/about">Despre</a></li>
+				<li><a href="/legal">Legal</a></li>
+			</ul>
+		</div>
+		<div class="contact">
+			<a href="mailto:info@property.com">info@property.com</a>
+		</div>
+	</aside>
+	<div class="main-content zones">
+		<div class="outer">
+			<a href="/users"><image class="icon" src="../static/images/user_icon.png" th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
+			<div class="middle">
+				<div class="inner">
+					<div class=''>
+						<img class="" src="../static/images/Casa_Matei.jpg" th:src="@{/images/Casa_Matei.jpg}" alt="oldtown" width="200" /> <img class=""
+							src="../static/images/Gheorghieni.jpg" th:src="@{/images/Gheorghieni.jpg}" alt="oldtown" width="200"
+						/>
+					</div>
+					<div class=''>
+						<img class="" src="../static/images/Eroilor.jpg" th:src="@{/images/Eroilor.jpg}" alt="oldtown" width="200" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>

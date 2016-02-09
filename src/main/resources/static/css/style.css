@@ -16,6 +16,9 @@
 .large {
     font-size: 20px;
 }
+body {
+    background-color: #EFEBE9;
+}
 aside {
     width: 20%;
     height: 98vh;
@@ -40,12 +43,21 @@ aside ul a {
 }
 aside ul a:hover {
     margin-left: 0;
+    text-decoration: none;
+    color: inherit;
 }
 aside ul a:hover:before {
     content: '|';
     margin-right: 3px;
+    font-weight: bold;    
+}
+aside ul a.active {
+    margin-left: 0;
+}
+aside ul a.active:before {
+    content: '|';
+    margin-right: 3px;
     font-weight: bold;
-    //font-size: 20px;
 }
 ul {
     list-style-type: none;
@@ -114,14 +126,47 @@ aside ul {
     display: table;
     position: absolute;
     height: 95%;
-    width: 75%;
-    border: 1px solid #949494;    
+    width: 75%;       
 }
 .outer.half {
-    height: 47%;
+    height: 45%;   
 }
 .outer.half:nth-child(2) {
-    top: 50%;
+    top: 52%;
+}
+.apartments .outer.half:nth-child(1) {
+    background: url('../images/Apartament_1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.apartments .outer.half:nth-child(2) {
+    background: url('../images/Apartament_2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.houses .outer.half:nth-child(1) {
+    background: url('../images/Case_3.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.houses .outer.half:nth-child(2) {
+    background: url('../images/Case_2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.comm .outer.half:nth-child(1) {
+    background: url('../images/Spatii_1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.comm .outer.half:nth-child(2) {
+    background: url('../images/Spatii_2.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.land .outer.half:nth-child(1) {
+    background: url('../images/Teren_1.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.land .outer.half:nth-child(2) {
+    background: url('../images/Teren_2.jpg') no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: grayscale(80%);
+    filter: grayscale(80%);
 }
 .outer.quote {
     border: none;
@@ -143,7 +188,9 @@ aside ul {
 }
 img.icon {
     position: absolute;
+    top: 10px;
     right: 10px;
+    width: 35px;
 }
 .inner.narrow {
     width: 60%;
@@ -161,14 +208,20 @@ img.icon {
 .left-aligned {
     text-align: left;
 }
+.right-aligned {
+    text-align: right;
+}
 .courthouse {
     width: 40%;
 }
-input, textarea {
+.main-content input, .main-content textarea {
     margin-bottom: 25px;
     margin-top: 5px;
     font-family: 'ArchitectsDaughter', Times, serif;
     font-size: 11px;
+}
+.main-content label {
+    font-weight: 300;
 }
 textarea {
     padding: 10px;
@@ -189,9 +242,10 @@ input[type='submit'] {
     cursor: pointer;
 }
 .sell-rent {
+    opacity: 0.8;
     display: block;
     width: 50%;
-    border: 1px solid #949494;
+    border: 1px solid black;
     border-radius: 10px;
     text-transform: uppercase;
     font-family: 'Julius', Times, serif;
@@ -199,11 +253,16 @@ input[type='submit'] {
     margin: auto;
     line-height: 100px;
     text-decoration: none;
-    color: #C3C3C3;
+    color: #595959;
     background: #E6E6E6;
+    box-shadow: 3px 5px 10px black;
 }
 .sell-rent:hover {
     color: black;
+}
+.sell-rent.disabled {
+    pointer-events: none;
+    color: #d9d9d9;
 }
 
 #login {
@@ -223,4 +282,162 @@ input[type='submit'] {
     background: #B3F09F;
     border-color: #67C549;
     color: #286514 ;
+}
+.profile-image img {
+    border-radius: 50%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#update-profile input[type='email'], #update-profile input[type='text']  {
+    width: 80%;
+}
+#update-profile a {
+    float: right;
+    margin-right: 20%;
+}
+.main-content .modal-header {
+    border-bottom: none;
+}
+@media (min-width: 768px) {
+    .main-content .modal-dialog {
+        width: 500px;
+        margin-top: 10%;
+        margin-left: 52%;
+    }     
+}
+#changePassword form {
+    width: 90%;    
+    margin: auto;
+}
+#changePassword input[type='password'] {
+    width: 100%;
+}   
+#changePassword input[type='submit'] {
+    width: 150px;
+}
+
+.eval-inputs {
+    float: left;
+    width: 30%;
+    
+}
+.eval-inputs p {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.eval-inputs .margined {
+    margin-right: 10%;
+}
+.eval-inputs select, .eval-inputs p input {
+    padding: 2px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0;
+    font-family: 'ArchitectsDaughter', Times, serif;
+    font-size: 10px;
+    box-shadow: -4px 5px 10px grey;    
+}
+.eval-inputs select {
+    width: 170px;
+}
+.eval-inputs p input {
+    width: 50px;
+}
+.eval-inputs input[type='checkbox'] {
+    width: initial;
+}
+.cluj-areas {
+    width: 70%;
+    float: left;
+}
+.cluj-areas img {
+    width: 100%;
+}
+.eval-buttons {
+    font-family: 'Julius';
+    font-size: 22px;    
+}
+.eval-buttons input[type='text'] {
+    width: 15%;
+    font-family: 'Julius';
+    font-size: 22px;
+    border-radius: 5px;
+    border: 1px solid black;   
+}
+.eval-buttons input[type='submit'] {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.eval-buttons div:nth-child(2) input {
+    width: 35%;
+    margin-bottom: 5px;
+}
+#chooseAvatar img {
+    float: left;
+    margin: 5px;    
+    cursor: pointer;
+}
+#chooseAvatar img:hover {
+    border: 1px solid black;
+}
+#chooseAvatar img:active, .selected-avatar {
+    border: 1px solid black;
+}
+#uploadPicture label {
+    margin-top: 25px;
+}
+.zones .inner img {
+    display: block; 
+    width: 100%;
+    margin-bottom: 15px;
+}
+.zones .inner div{
+    width: 45%;
+    float: left;    
+}
+.zones .inner div:nth-child(1) {
+    margin-right: 15px;
+}
+.inner .nav-tabs {
+    width: 495px;    
+    border: none;
+    margin: auto;
+}
+.inner .nav-tabs li a {
+    border: 1px solid #AFAFAF;
+    margin-right: -1px;
+    color: black;
+}
+.inner .nav-tabs li a:hover, .inner .nav-tabs li.active a:hover {
+    border: 1px solid #AFAFAF;
+    background: #E6E6E6;
+} 
+.inner .nav-tabs li.active a {
+    border: 1px solid #AFAFAF;
+    background: #E6E6E6;
+}
+
+.table-wrapper {
+  width: 100%;
+  margin: auto;
+}
+.table-scroll {
+  height: 200px;
+  overflow-y: auto;  
+  margin-top: 40px;   
+}
+.table-wrapper table {
+  width: 100%;
+}
+.my-props td, .my-props th {    
+    padding: 10px;
+}
+.my-props td:last-child {
+    text-align: center;
+}
+.my-properties p {
+    margin-top: 20px;
+    margin-bottom: 30px;
 }

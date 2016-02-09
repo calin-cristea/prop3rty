@@ -1,6 +1,7 @@
 package com.herokuapp.prop3rty.domain;
 
 public class Building extends AssetModel {
+
 	private ThermalInsulation thermalInsulation;
 	private Finishing finishing;
 	private CentralHeating centralHeating;

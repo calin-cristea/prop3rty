@@ -1,123 +1,113 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>prop3rty - Evaluare apartament</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta content="width=device-width, initial-scale=1, maximum-scale=1"
-	name="viewport" />
-<script type="text/javascript"
-	src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
-	th:href="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-<script type="text/javascript"
-	src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
-	th:href="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
-<link
-	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
-	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
-	rel="stylesheet" type="text/css" />
-<link
-	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css"
-	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css}"
-	rel="stylesheet" type="text/css" />
+<title>Vanzare apartamente | Prop3rty</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<ul class="nav nav-pills navbar-right">
-					<li><a href="#"><img src="../static/images/logo2.jpg"
-							height="25" th:src="@{images/logo2.jpg}" /></a></li>
-				</ul>
-			</div>
+	<aside>
+		<div class="logo">
+			<a href="#">
+				<p class="title">Prop3rty</p>
+				<p>2015 Olympia Center, Cluj</p>
+			</a>
 		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<img src="..\static\images\prop3rty.png" class="img-responsive"
-							th:src="@{images/prop3rty.png}" />
-					</div>
-				</div>
-				<br />
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<ul class="nav nav-pills nav-stacked">
-							<li><a href="/">ACASA</a></li>
-							<li class="active"><a href="#">APARTAMENTE</a></li>
-							<li><a href="#">PROPRIETATI COMERCIALE</a></li>
-							<li><a href="#">TERENURI</a></li>
-							<li><a href="#">ZONE</a></li>
-							<li><a href="#">DOCUMENTATIE</a></li>
-							<li><a href="#">CONTACT</a></li>
-						</ul>
-					</div>
-				</div>
-				<br />
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<ul class="nav nav-pills nav-stacked">
-							<li><a href="#">DESPRE</a></li>
-							<li><a href="#">LEGAL</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-				<div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-						<form role="form" class="text-left">
-							<div class="form-group">
-								<label class="control-label" for="area">Suprafata:</label> <input
-									class="form-control input-sm" id="area" placeholder="Suprafata"
-									type="text" />
-							</div>
-							<div class="form-group">
-								<label class="control-label" for="thermalInsulation">Izolare
-									termica:</label> <select class="form-control input-sm"
-									id="thermalInsulation" placeholder="Izolare termica">
-									<option>Nu</option>
-									<option>Da</option>
+		<div class="main-menu">
+			<ul>
+				<li><a href="/apartments" class='active'>Apartamente</a></li>
+				<li><a href="/houses">Case</a></li>
+				<li><a href="/comm">Proprietati comerciale</a></li>
+				<li><a href="/lands">Terenuri</a></li>
+				<li><a href="/zone">Zone</a></li>
+				<li><a href="/docs">Documentatie</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="secondary-menu">
+			<ul>
+				<li><a href="/about">Despre</a></li>
+				<li><a href="/legal">Legal</a></li>
+			</ul>
+		</div>
+		<div class="contact">
+			<a href="mailto:info@property.com">info@property.com</a>
+		</div>
+	</aside>
+	<div class="main-content">
+		<div class="outer">
+			<a href="/users"><image class="icon" src="../static/images/user_icon.png" th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
+			<div class="middle">
+				<div class="left-aligned inner wide">
+					<form method='post' th:action="@{apt_sell}" class='evaluation' th:object="${apt}">
+						<div class='eval-inputs'>
+							<p>
+								<select name='zone'>
+									<option selected='selected' disabled='disabled'>Zona</option>
+									<option>Andrei Muresanu</option>
+									<option>Becas</option>
+									<option>Borhanci</option>
+									<option>Bulgaria</option>
+									<option>Buna Ziua</option>
+									<option>Centru</option>
+									<option>Dambul Rotund</option>
+									<option>Europa</option>
+									<option>Faget</option>
+									<option>Iris</option>
+									<option>Gheorgheni</option>
+									<option>Grigorescu</option>
+									<option>Gruia</option>
+									<option>Intre Lacuri</option>
+									<option>Manastur</option>
+									<option>Marasti</option>
+									<option>Plopilor</option>
+									<option>Someseni</option>
+									<option>Sopor</option>
+									<option>Zorilor</option>
 								</select>
-							</div>
-							<div class="form-group">
-								<label class="control-label">Finisaj:</label> <select
-									class="form-control input-sm">
-									<option>Nu</option>
-									<option>Mediu</option>
-									<option>Mare</option>
-									<option>Luxos</option>
+							</p>
+							<p class='right-aligned margined'>
+								<label for='area'>Suprafata</label> <input type='text' name='area' id='area' th:field="${apt.area}" /> mp
+							</p>
+							<p>
+								<label for='isolation'>Izolare terminca</label> <input type='checkbox' name='isolation' id='isolation' value='yes' th:field="${apt.thermalInsulation}" />
+							</p>
+							<p>
+								<select name='state'>
+									<option selected='selected' disabled='disabled'>Finisaje</option>
+									<option>nu</option>
+									<option>asa-si-asa</option>
+									<option>da</option>
+									<option>lux</option>
 								</select>
+							</p>
+							<p>
+								<label for='heating'>Incalzire centrala</label> <input type='checkbox' name='heating' id='heating' value='yes' />
+							</p>
+							<p class='right-aligned'>
+								<label for='floor'>Etaj/nivel</label> <input type='text' name='floor' id='floor' />
+							</p>
+						</div>
+						<div class='cluj-areas'>
+							<img src="../static/images/cluj_areas.jpg" th:src="@{/images/cluj_areas.jpg}" alt='cluj-areas' width='100' />
+						</div>
+						<div class='eval-buttons centered-text'>
+							<div>
+								<input type='submit' name='eval' value='eval' /> <label for='price'>Pret</label> <input type='text' id='price' readonly /> &euro; <input
+									type='submit' name='reeval' value='recalc'
+								/>
 							</div>
-							<div class="form-group">
-								<label class="control-label">Incalzire centrala:</label> <select
-									class="form-control input-sm">
-									<option>Nu</option>
-									<option>Da</option>
-								</select>
+							<div>
+								<input type='submit' name='saveResult' value='Salveaza rezultatele' /> <input type='submit' name='sendResult'
+									value='Triite rezultatele pe mail'
+								/>
 							</div>
-							<div class="form-group">
-								<label class="control-label" for="aptLevel">Etaj /
-									Nivel:</label> <input class="form-control input-sm" type="text"
-									id="aptLevel" placeholder="Etaj / Nivel" />
-							</div>
-							<div class="text-center">
-								<button type="submit" class="btn btn-default btn-lg">EVAL</button>
-							</div>
-
-							<div class="panel panel-default">
-
-								<div class="panel-body">Result</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-						<img src="..\static\images\cluj_areas.jpg" class="img-responsive"
-							th:src="@{images/cluj_areas.jpg}" />
-					</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
