@@ -2,7 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Vanzare apartamente | Prop3rty</title>
-<link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+<link rel="stylesheet" type="text/css" href="../static/css/style.css"
+	th:href="@{/css/style.css}">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -37,71 +38,61 @@
 	</aside>
 	<div class="main-content">
 		<div class="outer">
-			<a href="/users"><image class="icon" src="../static/images/user_icon.png" th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
+			<a href="/users"><image class="icon"
+					src="../static/images/user_icon.png"
+					th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
 			<div class="middle">
 				<div class="left-aligned inner wide">
-					<form method='post' th:action="@{apt_sell}" class='evaluation' th:object="${apt}">
+					<form method='post' th:action="@{/apartments/apt_sell}" class='evaluation'
+						th:object="${apt}">
 						<div class='eval-inputs'>
 							<p>
-								<select name='zone'>
-									<option selected='selected' disabled='disabled'>Zona</option>
-									<option>Andrei Muresanu</option>
-									<option>Becas</option>
-									<option>Borhanci</option>
-									<option>Bulgaria</option>
-									<option>Buna Ziua</option>
-									<option>Centru</option>
-									<option>Dambul Rotund</option>
-									<option>Europa</option>
-									<option>Faget</option>
-									<option>Iris</option>
-									<option>Gheorgheni</option>
-									<option>Grigorescu</option>
-									<option>Gruia</option>
-									<option>Intre Lacuri</option>
-									<option>Manastur</option>
-									<option>Marasti</option>
-									<option>Plopilor</option>
-									<option>Someseni</option>
-									<option>Sopor</option>
-									<option>Zorilor</option>
+								<select name='zone' th:field="${apt.zone}">
+									<option
+										th:each="zone : ${T(com.herokuapp.prop3rty.domain.Zone).values()}"
+										th:value="${zone}" th:text="${zone}"></option>
 								</select>
 							</p>
 							<p class='right-aligned margined'>
-								<label for='area'>Suprafata</label> <input type='text' name='area' id='area' th:field="${apt.area}" /> mp
+								<label for='area'>Suprafata</label> <input type='text'
+									name='area' id='area' th:field="${apt.area}" /> mp
 							</p>
 							<p>
-								<label for='isolation'>Izolare terminca</label> <input type='checkbox' name='isolation' id='isolation' value='yes' th:field="${apt.thermalInsulation}" />
+								<label for='isolation'>Izolare terminca</label> <input
+									type='checkbox' name='isolation' id='isolation' value='YES'
+									th:field="${apt.thermalInsulation}" />
 							</p>
 							<p>
-								<select name='state'>
-									<option selected='selected' disabled='disabled'>Finisaje</option>
-									<option>nu</option>
-									<option>asa-si-asa</option>
-									<option>da</option>
-									<option>lux</option>
+								<select th:field="${apt.finishing}">
+									<option
+										th:each="finishing : ${T(com.herokuapp.prop3rty.domain.Finishing).values()}"
+										th:value="${finishing}" th:text="${finishing}"></option>
 								</select>
 							</p>
 							<p>
-								<label for='heating'>Incalzire centrala</label> <input type='checkbox' name='heating' id='heating' value='yes' />
+								<label for='heating'>Incalzire centrala</label> <input
+									type='checkbox' name='heating' id='heating' value='YES'
+									th:field="${apt.centralHeating}" />
 							</p>
 							<p class='right-aligned'>
-								<label for='floor'>Etaj/nivel</label> <input type='text' name='floor' id='floor' />
+								<label for='floor'>Etaj/nivel</label> <input type='text'
+									name='floor' id='floor' th:field="${apt.floor}"/>
 							</p>
 						</div>
 						<div class='cluj-areas'>
-							<img src="../static/images/cluj_areas.jpg" th:src="@{/images/cluj_areas.jpg}" alt='cluj-areas' width='100' />
+							<img src="../static/images/cluj_areas.jpg"
+								th:src="@{/images/cluj_areas.jpg}" alt='cluj-areas' width='100' />
 						</div>
 						<div class='eval-buttons centered-text'>
 							<div>
-								<input type='submit' name='eval' value='eval' /> <label for='price'>Pret</label> <input type='text' id='price' readonly /> &euro; <input
-									type='submit' name='reeval' value='recalc'
-								/>
+								<input type='submit' name='eval' value='eval' /> <label
+									for='price'>Pret</label> <input type='text' id='price' readonly />
+								&euro; <input type='submit' name='reeval' value='recalc' />
 							</div>
 							<div>
-								<input type='submit' name='saveResult' value='Salveaza rezultatele' /> <input type='submit' name='sendResult'
-									value='Triite rezultatele pe mail'
-								/>
+								<input type='submit' name='saveResult'
+									value='Salveaza rezultatele' /> <input type='submit'
+									name='sendResult' value='Trimite rezultatele pe mail' />
 							</div>
 						</div>
 					</form>

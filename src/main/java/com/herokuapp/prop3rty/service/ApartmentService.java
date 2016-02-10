@@ -1,10 +1,12 @@
 package com.herokuapp.prop3rty.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.herokuapp.prop3rty.dao.BasePriceDAO;
 import com.herokuapp.prop3rty.domain.Apartment;
 
+@Service
 public class ApartmentService {
 	
 	@Autowired

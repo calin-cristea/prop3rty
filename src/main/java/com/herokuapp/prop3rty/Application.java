@@ -18,10 +18,10 @@ public class Application {
 
 	}
 
-	@Bean
+	/*@Bean
 	public UserDAO userDao() {
 		return new UserRepository("postgresql.cristeanet.com", "5432", "prop3rty", "prop3rty", "user.prop3rty");
 
-	}
+	}*/
 
 }

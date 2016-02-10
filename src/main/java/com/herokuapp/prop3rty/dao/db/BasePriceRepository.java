@@ -22,7 +22,7 @@ public class BasePriceRepository implements BasePriceDAO {
 
 	public BasePrice getByAssetAndZone(AssetModel asset) {
 		String sql = "SELECT * FROM baseprice WHERE asset = ? AND zone = ?";
-		return jdbc.queryForObject(sql, BasePrice.class, asset.getAssetType().name(), asset.getZone());
+		return jdbc.queryForObject(sql, BasePrice.class, asset.getAssetType().name(), asset.getZone().name());
 	}
 
 	@Override
