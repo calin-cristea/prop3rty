@@ -38,15 +38,15 @@ public class ApartmentsController {
 	}
 	
 	@RequestMapping(value = "/apt_sell", method = RequestMethod.POST)
-	public String sellEval(Apartment apt, BindingResult bindingResult) {
-		List<FieldError> list = bindingResult.getFieldErrors();
+	public ModelAndView sellEval(Apartment apt) {
+		/*List<FieldError> list = bindingResult.getFieldErrors();
 		for (FieldError fe:list) {
 			System.out.println(fe.getCode() + ":" + fe.getDefaultMessage());
-		}
+		}*/
 		aptService.evaluate(apt);
-		ModelAndView view = new ModelAndView("apt_sell");
+		ModelAndView view = new ModelAndView("apt_sell_result");
 		view.addObject("aptEval", aptService.evaluate(apt));
-		return "apt_sell";
+		return view;
 	}
 
 	@RequestMapping("/apt_rent")
