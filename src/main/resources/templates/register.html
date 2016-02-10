@@ -43,15 +43,21 @@
 			<div class="middle">
 				<div class="centered-text inner narrow">
 					<h1>inregistrare user nou</h1>
-					<form method="post" id="login" th:action="@{register}" th:object="${user}">
-						<label class='left-aligned'>E-mail*</label><br /> <input type="email" name="email" id="email" th:field="${user.email}" /><br /> <label
-							for="password"
-						>Parola*</label><br /> <input type="password" name="password" id="password" th:field="${user.pass}" /><br /> <label for="password-confirm">Reintrodu
-							parola*</label><br /> <input type="password" name="password-confirm" id="password-confirm" /><br /> <label for="firstname">Prenume*</label><br /> <input
-							type="text" name="firstname" id="firstname" th:field="${user.firstName}"
-						/><br /> <label for="lastname">Nume*</label><br /> <input type="text" name="lastname" id="lastname" th:field="${user.lastName}" /><br /> <label
-							for="phone"
-						>Telefon</label><br /> <input type="text" name="phone" id="phone" th:field="${user.phone}" /><br />
+					<form method="post" id="login" th:action="@{register}"
+						th:object="${user}">
+						<label class='left-aligned'>E-mail*</label><br /> <input
+							type="email" name="email" id="email" th:field="${user.email}" /><br />
+						<label for="password">Parola*</label><br /> <input
+							type="password" name="password" id="password"
+							th:field="${user.pass}" /><br /> <label for="password-confirm">Reintrodu
+							parola*</label><br /> <input type="password" name="password-confirm"
+							id="password-confirm" /><br /> <label for="firstname">Prenume*</label><br />
+						<input type="text" name="firstname" id="firstname"
+							th:field="${user.firstName}" /><br /> <label
+							for="lastname">Nume*</label><br /> <input type="text"
+							name="lastname" id="lastname" th:field="${user.lastName}" /><br />
+						<label for="phone">Telefon</label><br /> <input
+							type="text" name="phone" id="phone" th:field="${user.phone}" /><br />
 						<!--  <input type="hidden" th:field="${user.id}" name="id" id="id" /> -->
 						<p>
 							<input type="submit" name="submit" value="creeaza cont" /><br />
