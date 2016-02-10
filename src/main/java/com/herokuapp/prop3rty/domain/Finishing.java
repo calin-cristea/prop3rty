@@ -1,7 +1,7 @@
 package com.herokuapp.prop3rty.domain;
 
 public enum Finishing {
-	NONE(-0.10), MEDIUM(0.00), HIGH(0.05), LUXURY(0.15);
+	NONE(0.90), MEDIUM(1.00), HIGH(1.05), LUXURY(1.15);
 
 	double value;
 

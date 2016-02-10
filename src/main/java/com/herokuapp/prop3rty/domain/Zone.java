@@ -22,6 +22,6 @@ public enum Zone {
 	plopilor,
 	someseni,
 	sopor,
-	zorilor,
+	zorilor
 	
 }

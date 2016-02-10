@@ -2,10 +2,10 @@ package com.herokuapp.prop3rty.domain;
 
 public enum AssetType {
 	
-	NEW_APARTMENT,
-	OLD_APARTMENT,
-	LAND,
-	HOUSE,
-	COMERCIAL
+	new_apartment,
+	old_apartment,
+	land,
+	house,
+	comercial
 	
 }

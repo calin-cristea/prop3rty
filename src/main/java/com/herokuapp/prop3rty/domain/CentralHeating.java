@@ -1,8 +1,8 @@
 package com.herokuapp.prop3rty.domain;
 
 public enum CentralHeating {
-	YES (0.03),
-	NO (-0.03);
+	YES (1.03),
+	NO (0.97);
 	
 	double value;
 	

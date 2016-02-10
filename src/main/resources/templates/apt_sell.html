@@ -111,6 +111,15 @@
 									th:field="${apt.centralHeating}"
 								/>
 							</p>
+							<p>
+								<label for='old'>Mai vechi de 2000</label> <input
+									type='checkbox'
+									name='old'
+									id='old'
+									value='YES'
+									th:field="${apt.oldApt}"
+								/>
+							</p>
 							<p class='right-aligned'>
 								<label for='floor'>Etaj/nivel</label> <select
 									th:field="${apt.floor}"
@@ -140,6 +149,7 @@
 								/> <label for='price'>Pret</label> <input
 									type='text'
 									id='price'
+									th:field="${apt.finalPrice}"
 									readonly
 								/> &euro; <input
 									type='submit'

@@ -35,14 +35,9 @@ public class ApartmentsController {
 	
 	@RequestMapping(value = "/apartments/apt_sell", method = RequestMethod.POST)
 	public String sellEval(Apartment apt, Model model) {
-		/*List<FieldError> list = bindingResult.getFieldErrors();
-		for (FieldError fe:list) {
-			System.out.println(fe.getCode() + ":" + fe.getDefaultMessage());
-		}*/
-		//aptService.evaluate(apt);
-		//ModelAndView view = new ModelAndView("apt_sell_result");
-		model.addAttribute("aptEval", aptService.evaluate(apt));
-		return "apt_sell_result";
+		apt.setFinalPrice(aptService.evaluate(apt));
+		model.addAttribute("apt", apt);
+		return "apt_sell";
 	}
 
 	@RequestMapping("/apt_rent")
