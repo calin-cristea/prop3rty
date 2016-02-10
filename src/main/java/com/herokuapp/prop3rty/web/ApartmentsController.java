@@ -1,11 +1,10 @@
 package com.herokuapp.prop3rty.web;
 
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +15,6 @@ import com.herokuapp.prop3rty.domain.Apartment;
 import com.herokuapp.prop3rty.service.ApartmentService;
 
 @Controller
-@RequestMapping("/apartments")
 public class ApartmentsController {
 	
 	private final Logger log = LoggerFactory.getLogger(getClass());
@@ -24,29 +22,27 @@ public class ApartmentsController {
 	@Autowired
 	ApartmentService aptService;
 
-	@RequestMapping("")
-	public ModelAndView index() {
-		ModelAndView view = new ModelAndView("apartamente");
-		return view;
+	@RequestMapping(value = "/apartments")
+	public String index() {
+		return "apartamente";
 	}
 
-	@RequestMapping("/apt_sell")
-	public ModelAndView sell() {
-		ModelAndView view = new ModelAndView("apt_sell");
-		view.addObject("apt", new Apartment());
-		return view;
+	@RequestMapping(value = "/apartments/apt_sell")
+	public String sell(Apartment apt, Model model) {
+		model.addAttribute("apt", apt);
+		return "apt_sell";
 	}
 	
-	@RequestMapping(value = "/apt_sell", method = RequestMethod.POST)
-	public ModelAndView sellEval(Apartment apt) {
+	@RequestMapping(value = "/apartments/apt_sell", method = RequestMethod.POST)
+	public String sellEval(Apartment apt, Model model) {
 		/*List<FieldError> list = bindingResult.getFieldErrors();
 		for (FieldError fe:list) {
 			System.out.println(fe.getCode() + ":" + fe.getDefaultMessage());
 		}*/
-		aptService.evaluate(apt);
-		ModelAndView view = new ModelAndView("apt_sell_result");
-		view.addObject("aptEval", aptService.evaluate(apt));
-		return view;
+		//aptService.evaluate(apt);
+		//ModelAndView view = new ModelAndView("apt_sell_result");
+		model.addAttribute("aptEval", aptService.evaluate(apt));
+		return "apt_sell_result";
 	}
 
 	@RequestMapping("/apt_rent")

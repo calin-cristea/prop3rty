@@ -14,7 +14,7 @@ import com.herokuapp.prop3rty.domain.AssetModel;
 import com.herokuapp.prop3rty.domain.BasePrice;
 
 @Repository
-public class BasePriceRepository extends RepoConnection implements BasePriceDAO {
+public class BasePriceRepository2 implements BasePriceDAO {
 
 	private final Logger log = LoggerFactory.getLogger(getClass());
 

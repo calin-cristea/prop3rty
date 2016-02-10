@@ -14,7 +14,7 @@ import com.herokuapp.prop3rty.dao.UserDAO;
 import com.herokuapp.prop3rty.domain.Role;
 import com.herokuapp.prop3rty.domain.User;
 
-public class UserRepository implements UserDAO {
+public abstract class UserRepository implements UserDAO {
 
 	private String host;
 	private String port;
