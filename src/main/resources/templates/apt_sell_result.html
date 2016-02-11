@@ -17,7 +17,7 @@
 <body>
 	<aside>
 		<div class="logo">
-			<a href="/">
+			<a href="#">
 				<p class="title">Prop3rty</p>
 				<p>2015 Olympia Center, Cluj</p>
 			</a>
@@ -58,7 +58,7 @@
 			<div class="middle">
 				<div class="left-aligned inner wide">
 					<form
-						method="post"
+						method='post'
 						th:action="@{/apartments/apt_sell}"
 						class='evaluation'
 						th:object="${apt}"
@@ -77,15 +77,18 @@
 								</select>
 							</p>
 							<p class='right-aligned margined'>
-								<label for='area'>Suprafata</label> <input
+								<label for='area'>Suprafata</label>
+								<input
 									type='text'
 									name='area'
 									id='area'
 									th:field="${apt.area}"
-								/> mp
+								/>
+								mp
 							</p>
 							<p>
-								<label for='isolation'>Izolare terminca</label> <input
+								<label for='isolation'>Izolare terminca</label>
+								<input
 									type='checkbox'
 									name='isolation'
 									id='isolation'
@@ -103,21 +106,13 @@
 								</select>
 							</p>
 							<p>
-								<label for='heating'>Incalzire centrala</label> <input
+								<label for='heating'>Incalzire centrala</label>
+								<input
 									type='checkbox'
 									name='heating'
 									id='heating'
 									value='YES'
 									th:field="${apt.centralHeating}"
-								/>
-							</p>
-							<p>
-								<label for='old'>Mai vechi de 2000</label> <input
-									type='checkbox'
-									name='old'
-									id='old'
-									value='YES'
-									th:field="${apt.oldApt}"
 								/>
 							</p>
 							<p class='right-aligned'>
@@ -146,12 +141,9 @@
 									type='submit'
 									name='eval'
 									value='eval'
-								/> <label for='price'>Pret</label> <input
-									type='text'
-									id='price'
-									th:field="${apt.finalPrice}"
-									readonly
-								/> &euro; <input
+								/>
+
+								<input
 									type='submit'
 									name='reeval'
 									value='recalc'
@@ -162,7 +154,8 @@
 									type='submit'
 									name='saveResult'
 									value='Salveaza rezultatele'
-								/> <input
+								/>
+								<input
 									type='submit'
 									name='sendResult'
 									value='Trimite rezultatele pe mail'
@@ -170,6 +163,17 @@
 							</div>
 						</div>
 					</form>
+					<div>
+						<label for='price'>Pret</label>
+						<input
+							type='text'
+							id='price'
+							readonly
+							th:text="${aptEval}"
+						/>
+						&euro;
+					</div>
+
 				</div>
 			</div>
 		</div>

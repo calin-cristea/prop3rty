@@ -9,7 +9,7 @@ import com.herokuapp.prop3rty.domain.User;
 @Service
 public class UserService {
 	
-	@Autowired
+	//@Autowired
 	private UserDAO dao;
 	
 	public User save(User user) {
