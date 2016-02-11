@@ -33,8 +33,8 @@ aside div {
     position: absolute;
     width: 100%;
 }
-aside a {
-    color: #286514;
+aside a, aside a:hover {
+    color: black;
     text-decoration: none;    
 }
 aside ul a {
@@ -67,9 +67,9 @@ aside ul {
     line-height: 25px;
 }
 .logo {
-    border: 1px solid #62EC36;
+/*    border: 1px solid #62EC36;
     background: #C2FFAE;
-    color: #286514;
+    color: #286514;*/
     padding: 0 5px;
     line-height: 15px;
     top: 10%;
@@ -89,7 +89,7 @@ aside ul {
     padding: 7px 0;
 }
 .logo .title {
-    border-bottom: 2px solid #286514;
+    border-bottom: 2px solid black;
     font-size: 28px;
     font-weight: bold;
     padding: 12px 0;
@@ -165,8 +165,6 @@ aside ul {
 .land .outer.half:nth-child(2) {
     background: url('../images/Teren_2.jpg') no-repeat;
     background-size: 100% 100%;
-    -webkit-filter: grayscale(80%);
-    filter: grayscale(80%);
 }
 .outer.quote {
     border: none;
@@ -440,4 +438,24 @@ input[type='submit'] {
 .my-properties p {
     margin-top: 20px;
     margin-bottom: 30px;
+}
+.frontpage .inner img {
+    width: 100%;
+}
+.user-menu {
+    list-style-type: none;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.user-menu li {
+    display: inline;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.user-menu li a {
+    color: black;
+    text-decoration: none;
+}
+.user-menu li a:hover {
+    text-decoration: underline;
 }

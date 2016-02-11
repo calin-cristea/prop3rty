@@ -1,78 +1,49 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>prop3rty</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta content="width=device-width, initial-scale=1, maximum-scale=1"
-	name="viewport" />
-<script type="text/javascript"
-	src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
-	th:href="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-<script type="text/javascript"
-	src="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/js/bootstrap.min.js"
-	th:href="@{/webjars/bootstrap/3.3.4/js/bootstrap.min.js}"></script>
-<link
-	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
-	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
-	rel="stylesheet" type="text/css" />
-<link
-	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css"
-	th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css}"
-	rel="stylesheet" type="text/css" />
+<title>Prop3rty</title>
+<link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="container text-center">
-		<div class="row">
-			<div class="col-md-12">
-				<ul class="nav nav-pills navbar-right">
-					<li><a href="#">Contul meu<br /></a></li>
-					<li><a href="#">Inregistrare user nou</a></li>
-					<li><a href="#"><img src="../static/images/logo2.jpg"
-							height="25" th:src="@{images/logo2.jpg}" /></a></li>
-				</ul>
-			</div>
+	<aside>
+		<div class="logo">
+			<a href="/">
+				<p class="title">Prop3rty</p>
+				<p>2015 Olympia Center, Cluj</p>
+			</a>
 		</div>
-		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<img src="..\static\images\prop3rty.png" class="img-responsive"
-							th:src="@{images/prop3rty.png}" />
-					</div>
-				</div>
-				<br />
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<ul class="nav nav-pills nav-stacked">
-							<li class="active"><a href="#">ACASA</a></li>
-							<li><a href="/apartments">APARTAMENTE</a></li>
-							<li><a href="#">PROPRIETATI COMERCIALE</a></li>
-							<li><a href="#">TERENURI</a></li>
-							<li><a href="#">ZONE</a></li>
-							<li><a href="#">DOCUMENTATIE</a></li>
-							<li><a href="#">CONTACT</a></li>
-						</ul>
-					</div>
-				</div>
-				<br />
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<ul class="nav nav-pills nav-stacked">
-							<li><a href="#">DESPRE</a></li>
-							<li><a href="#">LEGAL</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-				<div class="row">
-					<img class="img-responsive" src="../static/images/avram_iancu.jpg"
-						th:src="@{images/avram_iancu.jpg}" />
+		<div class="main-menu">
+			<ul>
+				<li><a href="/apartments">Apartamente</a></li>
+				<li><a href="/houses">Case</a></li>
+				<li><a href="/comm">Proprietati comerciale</a></li>
+				<li><a href="/lands">Terenuri</a></li>
+				<li><a href="/zone">Zone</a></li>
+				<li><a href="/docs">Documentatie</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="secondary-menu">
+			<ul>
+				<li><a href="/about">Despre</a></li>
+				<li><a href="/legal">Legal</a></li>
+			</ul>
+		</div>
+		<div class="contact">
+			<a href="mailto:info@property.com">info@property.com</a>
+		</div>
+	</aside>
+	<div class="main-content frontpage">
+		<div class="outer">
+			<a href="/users"><image class="icon" src="../static/images/user_icon.png" th:src="@{/images/user_icon.png}" alt="user-icon" width="45" /></a>
+			<div class="middle">
+				<div class="centered-text inner wide">
+					<img src="../static/images/avram_iancu.jpg" th:src="@{/images/avram_iancu.jpg}" alt="city" width="500" />
 				</div>
 			</div>
 		</div>
 	</div>
-
-
 </body>
 </html>
