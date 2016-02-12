@@ -26,7 +26,7 @@ public class UserRepository implements UserDAO {
 	@Autowired
 	private JdbcTemplate jdbc;
 
-	private RowMapper<AssetModel> assetMapper = new RowMapper<AssetModel>() {
+	/*private RowMapper<AssetModel> assetMapper = new RowMapper<AssetModel>() {
 		public AssetModel mapRow(ResultSet rs, int rowNum) throws SQLException {
 			AssetModel asset = new AssetModel();
 			asset.setId(rs.getLong("id"));
@@ -35,7 +35,7 @@ public class UserRepository implements UserDAO {
 			asset.setPrice(rs.getInt("price"));
 			return asset;
 		}
-	};
+	};*/
 
 	@Override
 	public Collection<User> getAll() {
@@ -52,7 +52,7 @@ public class UserRepository implements UserDAO {
 	@Override
 	public User update(User model) {
 		String sql;
-		PreparedStatement ps;
+		//PreparedStatement ps;
 		Object[] args = new Object[] { model.getEmail(), model.getPass(), model.getFirstName(), model.getLastName(),
 				model.getPhone(), model.getRole().name() };
 		if (model.getId() > 0) {

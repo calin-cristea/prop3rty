@@ -13,7 +13,7 @@ public class LandService {
 	@Autowired
 	private AssetModelDao dao;
 		
-	public double evaluate(Land land) {
+	/*public double evaluate(Land land) {
 		double finalPrice = dao.getByAssetAndZone(land).getPrice()
 				* land.getArea() 
 				* land.getThermalInsulation().getValue() 
@@ -21,6 +21,6 @@ public class LandService {
 				* land.getFinishing().getValue();
 		return finalPrice;
 				
-	}
+	}*/
 	
 }
