@@ -6,6 +6,7 @@ public class Land extends AssetModel {
 	private RunningWater runningWater;
 	private Electricity electricity;
 	private int front;
+	private Building landBuilding = new Building();
 
 	public Land() {
 		setAssetType(AssetType.land);
@@ -72,6 +73,14 @@ public class Land extends AssetModel {
 		if (runningWater != other.runningWater)
 			return false;
 		return true;
+	}
+
+	public Building getLandBuilding() {
+		return landBuilding;
+	}
+
+	public void setLandBuilding(Building landBuilding) {
+		this.landBuilding = landBuilding;
 	}
 
 }
