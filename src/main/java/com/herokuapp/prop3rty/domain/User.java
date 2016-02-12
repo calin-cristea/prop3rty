@@ -7,6 +7,7 @@ public class User extends AbstractModel {
 	private String firstName;
 	private String lastName;
 	private String phone;
+	private String errorMessage;
 	
 	public User() {
 		role = Role.USER;
@@ -60,10 +61,18 @@ public class User extends AbstractModel {
 		this.phone = phone;
 	}
 
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+
 	@Override
 	public String toString() {
 		return "User [role=" + role + ", email=" + email + ", pass=" + pass + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", phone=" + phone + "]";
+				+ lastName + ", phone=" + phone + ", errorMessage=" + errorMessage + "]";
 	}
 
 	@Override
@@ -71,6 +80,7 @@ public class User extends AbstractModel {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
+		result = prime * result + ((errorMessage == null) ? 0 : errorMessage.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((pass == null) ? 0 : pass.hashCode());
@@ -92,6 +102,11 @@ public class User extends AbstractModel {
 			if (other.email != null)
 				return false;
 		} else if (!email.equals(other.email))
+			return false;
+		if (errorMessage == null) {
+			if (other.errorMessage != null)
+				return false;
+		} else if (!errorMessage.equals(other.errorMessage))
 			return false;
 		if (firstName == null) {
 			if (other.firstName != null)

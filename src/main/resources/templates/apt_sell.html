@@ -72,7 +72,7 @@
 									<option
 										th:each="zone : ${T(com.herokuapp.prop3rty.domain.Zone).values()}"
 										th:value="${zone}"
-										th:text="${zone}"
+										th:text="${zone.displayName}"
 									></option>
 								</select>
 							</p>
@@ -98,7 +98,7 @@
 									<option
 										th:each="finishing : ${T(com.herokuapp.prop3rty.domain.Finishing).values()}"
 										th:value="${finishing}"
-										th:text="${finishing}"
+										th:text="${finishing.finn}"
 									></option>
 								</select>
 							</p>
@@ -149,6 +149,7 @@
 								/> <label for='price'>Pret</label> <input
 									type='text'
 									id='price'
+									style="text-align:right"
 									th:field="${apt.finalPrice}"
 									readonly
 								/> &euro; <input

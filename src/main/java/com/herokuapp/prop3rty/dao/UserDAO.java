@@ -6,6 +6,6 @@ import com.herokuapp.prop3rty.domain.User;
 
 public interface UserDAO extends BaseDAO<User> {
 
-	Collection<User> searchByName(String query);
+	User searchByEmail(String email);
 
 }
