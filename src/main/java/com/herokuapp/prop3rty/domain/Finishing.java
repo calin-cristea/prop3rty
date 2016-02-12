@@ -1,16 +1,22 @@
 package com.herokuapp.prop3rty.domain;
 
 public enum Finishing {
-	NONE(0.90), MEDIUM(1.00), HIGH(1.05), LUXURY(1.15);
+	NONE(0.90, "Nefinisat"), MEDIUM(1.00, "Finisat"), HIGH(1.05, "Ultra finisat"), LUXURY(1.15, "Finisaj de lux");
 
-	double value;
+	private double value;
+	private String finn;
 
-	Finishing(double value) {
+	Finishing(double value, String finn) {
 		this.value = value;
+		this.finn = finn;
 	}
 
 	public double getValue() {
 		return value;
+	}
+
+	public String getFinn() {
+		return finn;
 	}
 
 }

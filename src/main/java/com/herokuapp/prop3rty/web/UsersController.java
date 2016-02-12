@@ -8,9 +8,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class UsersController {
 
 	@RequestMapping("/users")
-	public ModelAndView login() {
-		ModelAndView view = new ModelAndView("login");
-		return view;
+	public String login() {
+		return "login";
 	}
 
 }

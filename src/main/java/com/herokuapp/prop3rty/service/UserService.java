@@ -9,10 +9,14 @@ import com.herokuapp.prop3rty.domain.User;
 @Service
 public class UserService {
 	
-	//@Autowired
+	@Autowired
 	private UserDAO dao;
 	
 	public User save(User user) {
+		if (dao.searchByEmail(user.getEmail()) != null) {
+			user.setErrorMessage("Email already exists.");
+			return user;
+		}
 		return dao.update(user);
 		
 	}

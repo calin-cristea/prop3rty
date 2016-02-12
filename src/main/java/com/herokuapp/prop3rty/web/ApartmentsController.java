@@ -16,9 +16,9 @@ import com.herokuapp.prop3rty.service.ApartmentService;
 
 @Controller
 public class ApartmentsController {
-	
+
 	private final Logger log = LoggerFactory.getLogger(getClass());
-	
+
 	@Autowired
 	ApartmentService aptService;
 
@@ -32,7 +32,7 @@ public class ApartmentsController {
 		model.addAttribute("apt", apt);
 		return "apt_sell";
 	}
-	
+
 	@RequestMapping(value = "/apartments/apt_sell", method = RequestMethod.POST)
 	public String sellEval(Apartment apt, Model model) {
 		apt.setFinalPrice(aptService.evaluate(apt));
@@ -40,9 +40,8 @@ public class ApartmentsController {
 		return "apt_sell";
 	}
 
-	@RequestMapping("/apt_rent")
-	public ModelAndView rent() {
-		ModelAndView view = new ModelAndView("apt_rent");
-		return view;
+	@RequestMapping("/apartments/apt_rent")
+	public String rent() {
+		return "apt_rent";
 	}
 }

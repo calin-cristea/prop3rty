@@ -9,6 +9,9 @@ public class Building extends AssetModel {
 	private int area;
 
 	public ThermalInsulation getThermalInsulation() {
+		if (thermalInsulation == null) {
+			thermalInsulation = ThermalInsulation.NO;
+		}
 		return thermalInsulation;
 	}
 
@@ -25,6 +28,9 @@ public class Building extends AssetModel {
 	}
 
 	public CentralHeating getCentralHeating() {
+		if (centralHeating == null) {
+			centralHeating = CentralHeating.NO;
+		}
 		return centralHeating;
 	}
 

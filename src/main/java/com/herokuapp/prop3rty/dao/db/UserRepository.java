@@ -8,6 +8,7 @@ import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Repository;
 import com.herokuapp.prop3rty.dao.UserDAO;
 import com.herokuapp.prop3rty.domain.AssetModel;
 import com.herokuapp.prop3rty.domain.AssetType;
+import com.herokuapp.prop3rty.domain.Role;
 import com.herokuapp.prop3rty.domain.User;
 import com.herokuapp.prop3rty.domain.Zone;
 
@@ -26,14 +28,16 @@ public class UserRepository implements UserDAO {
 	@Autowired
 	private JdbcTemplate jdbc;
 
-	private RowMapper<AssetModel> assetMapper = new RowMapper<AssetModel>() {
-		public AssetModel mapRow(ResultSet rs, int rowNum) throws SQLException {
-			AssetModel asset = new AssetModel();
-			asset.setId(rs.getLong("id"));
-			asset.setAssetType(AssetType.valueOf(rs.getString("asset").trim()));
-			asset.setZone(Zone.valueOf(rs.getString("zone").trim()));
-			asset.setPrice(rs.getInt("price"));
-			return asset;
+	private RowMapper<User> userMapper = new RowMapper<User>() {
+		public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+			User user = new User();
+			user.setId(rs.getLong("id"));
+			user.setEmail(rs.getString("email").trim());
+			user.setFirstName(rs.getString("firstname"));
+			user.setLastName(rs.getString("lastname"));
+			user.setPhone(rs.getString("phone"));
+			user.setRole(Role.valueOf(rs.getString("role").trim()));
+			return user;
 		}
 	};
 
@@ -52,17 +56,16 @@ public class UserRepository implements UserDAO {
 	@Override
 	public User update(User model) {
 		String sql;
-		PreparedStatement ps;
 		Object[] args = new Object[] { model.getEmail(), model.getPass(), model.getFirstName(), model.getLastName(),
 				model.getPhone(), model.getRole().name() };
 		if (model.getId() > 0) {
 			sql = "update \"user\" set email=?, pass=?, firstname=?, lastname=?, phone=?, role = ? where id = ?";
 			jdbc.update(sql, args, model.getId());
 		} else {
+
 			sql = "insert into \"user\" (email, pass, firstname, lastname, phone, role) values (?, ?, ?, ?, ?, ?)";
 			jdbc.update(sql, args);
 		}
-
 		return model;
 	}
 
@@ -73,9 +76,13 @@ public class UserRepository implements UserDAO {
 	}
 
 	@Override
-	public Collection<User> searchByName(String query) {
-		// TODO Auto-generated method stub
-		return null;
+	public User searchByEmail(String email) {
+		String sql = "SELECT * FROM \"user\" WHERE email = ?";
+		try {
+			return jdbc.queryForObject(sql, userMapper, email);
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 
 }
