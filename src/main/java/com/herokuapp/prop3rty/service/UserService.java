@@ -14,7 +14,7 @@ public class UserService {
 	
 	public User save(User user) {
 		if (dao.searchByEmail(user.getEmail()) != null) {
-			user.setErrorMessage("Email already exists.");
+			user.setErrorMessage("Username already exists.");
 			return user;
 		}
 		return dao.update(user);
