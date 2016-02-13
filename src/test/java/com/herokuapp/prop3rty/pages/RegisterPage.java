@@ -1,4 +1,4 @@
-package com.pages;
+package com.herokuapp.prop3rty.pages;
 
 import org.junit.Assert;
 import net.serenitybdd.core.annotations.findby.FindBy;
@@ -82,12 +82,12 @@ public class RegisterPage extends PageObject {
 	}
 	
 	
-	@FindBy(xpath = "html/body/h1")
+	@FindBy(css = "div h1")
 	private static WebElementFacade validateTest;
 	 
 	public static void check_validation() {
 	System.out.println("Textul este:" + validateTest.getText());
-	Assert.assertEquals("Whitelabel Error Page", validateTest.getText());
+	Assert.assertEquals("Contul meu", validateTest.getText());
     }
 
 }

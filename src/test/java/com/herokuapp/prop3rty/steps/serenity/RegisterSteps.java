@@ -1,8 +1,9 @@
-package com.steps.serenity;
+package com.herokuapp.prop3rty.steps.serenity;
 
 import org.junit.Assert;
 
-import com.pages.RegisterPage;
+import com.herokuapp.prop3rty.pages.RegisterPage;
+
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 

@@ -1,4 +1,4 @@
-package com.pages;
+package com.herokuapp.prop3rty.pages;
 
 import org.junit.Assert;
 
@@ -22,7 +22,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateApt;
 
 	public static void aptPage_validation() {
-		System.out.println("Textul este:" + validateApt.getText());
 		Assert.assertEquals("VANZARE", validateApt.getText());
 	}
 
@@ -37,7 +36,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateHouses;
 
 	public static void housesPage_validation() {
-		System.out.println("Textul este:" + validateHouses.getText());
 		Assert.assertEquals("VANZARE", validateHouses.getText());
 	}
 
@@ -53,7 +51,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateComm;
 
 	public static void commPage_validation() {
-		System.out.println("Textul este:" + validateComm.getText());
 		Assert.assertEquals("VANZARE", validateComm.getText());
 	}
 
@@ -64,11 +61,10 @@ public class NavigationPage extends PageObject {
 		landsButton.click();
 	}
 
-	@FindBy(css = "div a[href='land_sell.html']")
+	@FindBy(css = "div a[href='/lands/land_sell']")
 	private static WebElementFacade validateLands;
 
 	public static void landsPage_validation() {
-		System.out.println("Textul este:" + validateLands.getText());
 		Assert.assertEquals("VANZARE", validateLands.getText());
 	}
 
@@ -84,7 +80,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateZone;
 
 	public static void zonePage_validation() {
-		System.out.println("Textul este:" + validateZone.getText());
 		Assert.assertEquals("ZONE", validateZone.getText());
 	}
 
@@ -99,7 +94,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateDocs;
 
 	public static void docsPage_validation() {
-		System.out.println("Textul este:" + validateDocs.getText());
 		Assert.assertEquals("DOCUMENTATIE", validateDocs.getText());
 	}
 
@@ -114,7 +108,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateContact;
 
 	public static void contactPage_validation() {
-		System.out.println("Textul este:" + validateContact.getText());
 		Assert.assertEquals("CONTACT", validateContact.getText());
 	}
 
@@ -129,7 +122,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateAbout;
 
 	public static void aboutPage_validation() {
-		System.out.println("Textul este:" + validateAbout.getText());
 		Assert.assertEquals("Prop3rty", validateAbout.getText());
 	}                
 
@@ -144,7 +136,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateLegal;
 
 	public static void legalPage_validation() {
-		System.out.println("Textul este:" + validateLegal.getText());
 		Assert.assertEquals("", validateLegal.getText());
 	} 
 
@@ -159,7 +150,6 @@ public class NavigationPage extends PageObject {
 	private static WebElementFacade validateHome;
 
 	public static void homePage_validation() {
-		System.out.println("Textul este:" + validateHome.getText());
 		Assert.assertEquals("", validateHome.getText());
 	} 
 

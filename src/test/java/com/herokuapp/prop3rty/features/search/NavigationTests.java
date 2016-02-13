@@ -1,4 +1,4 @@
-package com.features.search;
+package com.herokuapp.prop3rty.features.search;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.steps.serenity.NavigationSteps;
+import com.herokuapp.prop3rty.steps.serenity.NavigationSteps;
 
 @RunWith(SerenityRunner.class)
 public class NavigationTests {
