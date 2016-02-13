@@ -72,15 +72,36 @@
 		<dependency>
 			<groupId>net.sourceforge.nekohtml</groupId>
 			<artifactId>nekohtml</artifactId>
-			</dependency>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-			</dependency>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
+		<dependency>
+		<groupId>net.serenity-bdd</groupId>
+		<artifactId>serenity-core</artifactId>
+		<version>1.1.17</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		</dependency>
+	<dependency>
+		<groupId>net.serenity-bdd</groupId>
+		<artifactId>serenity-junit</artifactId>
+		<version>1.1.17</version>
+		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.assertj</groupId>
+		<artifactId>assertj-core</artifactId>
+		<version>1.7.0</version>
+	</dependency>
 	</dependencies>
 
 	<build>

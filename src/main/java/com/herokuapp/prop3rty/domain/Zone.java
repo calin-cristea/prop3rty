@@ -2,26 +2,34 @@ package com.herokuapp.prop3rty.domain;
 
 public enum Zone {
 	
-	andrei_muresanu,
-	becas,
-	borhanci,
-	bulgaria,
-	buna_ziua,
-	centru,
-	dambul_rotund,
-	europa,
-	faget,
-	floresti,
-	gheorgheni,
-	grigorescu,
-	gruia,
-	intre_lacuri,
-	iris,
-	manastur,
-	marasti,
-	plopilor,
-	someseni,
-	sopor,
-	zorilor
+	andrei_muresanu ("Andrei Muresanu"),
+	becas ("Becas"),
+	borhanci ("Borhanci"),
+	bulgaria ("Bulgaria"),
+	buna_ziua ("Buna Ziua"),
+	centru ("Centru"),
+	dambul_rotund ("Dambul Rotund"),
+	europa ("Europa"),
+	faget ("Faget"),
+	gheorgheni ("Gheorgheni"),
+	grigorescu ("Grigorescu"),
+	gruia ("Gruia"),
+	intre_lacuri ("Intre Lacuri"),
+	iris ("Iris"),
+	manastur ("Manastur"),
+	marasti ("Marasti"),
+	plopilor ("Plopilor"),
+	someseni ("Someseni"),
+	sopor ("Sopor"),
+	zorilor ("Zorilor");
 	
+	private String displayName;
+	
+	Zone(String displayName) {
+		this.displayName = displayName;
+	}
+
+	public String getDisplayName() {
+		return displayName;
+	}
 }

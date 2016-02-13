@@ -1,12 +1,12 @@
 package com.herokuapp.prop3rty.domain;
 
-public enum ThermalInsulation {
-	YES (1.03),
-	NO (0.97);
+public enum RunningWater {
+	YES (0.00),
+	NO (-0.03);
 	
 	double value;
 	
-	ThermalInsulation(double value) {
+	RunningWater(double value) {
 		this.value = value;
 	}
 

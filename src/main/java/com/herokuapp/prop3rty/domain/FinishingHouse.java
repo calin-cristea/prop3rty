@@ -1,16 +1,16 @@
 package com.herokuapp.prop3rty.domain;
 
-public enum ThermalInsulation {
-	YES (1.03),
-	NO (0.97);
-	
+public enum FinishingHouse {
+	NONE(0.73), MEDIUM(0.90), HIGH(1.00), LUXURY(1.15);
+
 	double value;
-	
-	ThermalInsulation(double value) {
+
+	FinishingHouse(double value) {
 		this.value = value;
 	}
 
 	public double getValue() {
 		return value;
 	}
+
 }

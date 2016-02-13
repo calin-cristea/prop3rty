@@ -5,18 +5,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/lands")
 public class LandsController {
-	@RequestMapping("")
-	public ModelAndView index() {
-		ModelAndView view = new ModelAndView("terenuri");
-		return view;
+
+	@RequestMapping("/lands")
+	public String index() {
+		return "terenuri";
+
 	}
 
-	@RequestMapping("/land_sell")
-	public ModelAndView sell() {
-		ModelAndView view = new ModelAndView("land_sell");
-		return view;
+	@RequestMapping("/lands/land_sell")
+	public String sell() {
+		return "land_sell";
 	}
 
 }
