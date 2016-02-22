@@ -1,5 +1,6 @@
 package com.herokuapp.prop3rty.service;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,16 +19,20 @@ public class UserServiceTest {
 	@Autowired
 	private UserService service;
 	
-	private User user = new User();
+	private User user;
 
 	@Before
 	public void setUp() {
-		
+		user = new User();
 		user.setEmail("test@email.com");
 		user.setPass("pass");
 		user.setFirstName("Test");
 		user.setLastName("TEST");
-		
+	}
+	
+	@After
+	public void tearDown() {
+		service.delete(user.getEmail());
 	}
 
 	@Test
@@ -38,9 +43,15 @@ public class UserServiceTest {
 	
 	@Test
 	public void testSave_existing_user() {
-		User existingUser = service.save(user);
+		User newUser = service.save(user);
+		User existingUser = service.save(newUser);
 		Assert.assertNotNull(existingUser.getErrorMessage());
-		Assert.assertEquals(user.getEmail(), existingUser.getEmail());
 	}
 
+	@Test
+	public void testDelete() {
+		User existingUser = service.save(user);
+		Assert.assertTrue(service.delete(existingUser.getEmail()));
+	}
+	
 }

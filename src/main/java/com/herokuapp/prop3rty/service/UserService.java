@@ -20,8 +20,13 @@ public class UserService {
 		return dao.update(user);	
 	}
 	
-	public boolean delete(User user) {
-		return dao.delete(user);
+	public boolean delete(String email) {
+		User user = dao.searchByEmail(email);
+		if (user == null) {
+			return false;
+		} else {
+			return dao.delete(user);
+		}
 	}
 	
 }
