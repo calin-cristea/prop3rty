@@ -17,8 +17,11 @@ public class UserService {
 			user.setErrorMessage("Username already exists.");
 			return user;
 		}
-		return dao.update(user);
-		
+		return dao.update(user);	
+	}
+	
+	public boolean delete(User user) {
+		return dao.delete(user);
 	}
 	
 }

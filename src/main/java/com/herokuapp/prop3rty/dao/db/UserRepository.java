@@ -1,6 +1,5 @@
 package com.herokuapp.prop3rty.dao.db;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
@@ -14,11 +13,8 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.herokuapp.prop3rty.dao.UserDAO;
-import com.herokuapp.prop3rty.domain.AssetModel;
-import com.herokuapp.prop3rty.domain.AssetType;
 import com.herokuapp.prop3rty.domain.Role;
 import com.herokuapp.prop3rty.domain.User;
-import com.herokuapp.prop3rty.domain.Zone;
 
 @Repository
 public class UserRepository implements UserDAO {
@@ -71,8 +67,13 @@ public class UserRepository implements UserDAO {
 
 	@Override
 	public boolean delete(User model) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean result = false;
+		if (model.getId() > 0) {
+			Object[] args = new Object[] { model.getId()};
+			jdbc.update("DELETE FROM \"user\" WHERE id = ?", args);
+			result = true;
+		}
+		return result;
 	}
 
 	@Override

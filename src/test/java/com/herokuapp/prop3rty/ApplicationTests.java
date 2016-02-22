@@ -8,17 +8,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-public class Application {
-	
+public class ApplicationTests {
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(ApplicationTests.class, args);
 
 	}
-
-	/*@Bean
-	public UserDAO userDao() {
-		return new UserRepository ("postgresql.cristeanet.com", "5432", "prop3rty", "prop3rty", "user.prop3rty");
-
-	}*/
-
 }
