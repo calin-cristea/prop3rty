@@ -1,0 +1,32 @@
+package com.cristeanet.prop3rty.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cristeanet.prop3rty.dao.UserDAO;
+import com.cristeanet.prop3rty.domain.User;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserDAO dao;
+	
+	public User save(User user) {
+		if (dao.searchByEmail(user.getEmail()) != null) {
+			user.setErrorMessage("Username already exists.");
+			return user;
+		}
+		return dao.update(user);	
+	}
+	
+	public boolean delete(String email) {
+		User user = dao.searchByEmail(email);
+		if (user == null) {
+			return false;
+		} else {
+			return dao.delete(user);
+		}
+	}
+	
+}

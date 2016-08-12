@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 
-	<groupId>com.herokuapp.prop3rty</groupId>
+	<groupId>com.cristeanet.prop3rty</groupId>
 	<artifactId>prop3rty</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<version>0.0.1</version>
+	<packaging>war</packaging>
 
 	<name>prop3rty</name>
 	<description>Real Estate Evaluator</description>
@@ -79,6 +79,11 @@
 			<artifactId>spring-jdbc</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
